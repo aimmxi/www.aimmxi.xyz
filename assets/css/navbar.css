@@ -1,0 +1,72 @@
+:root{
+	--max-navbar-dropdown-height: 170px;
+}
+
+/*Navbar*/
+.navbar{
+	width: var(--navbarwidth);
+	position: sticky;
+	top: 0;
+	height: 64px;
+	z-index: 10;
+	margin: 1vh auto auto auto;
+	background-color: #101d1f80;
+	border: 3px solid var(--cyan);
+	backdrop-filter: blur(10px);
+}
+
+.index-c{background-color: var(--cyan);}
+
+.index-img{height: 100%; color: black;}
+.navbar-void, .navbar-c{width: 100%;}
+.navbar-icon{height: 50%;}
+.navbar-tag{margin-bottom: 5px;}
+
+.navbar-elem{
+	background-color: var(--cyan);
+	position: relative;
+	width: 100%;
+	min-width: 100px;
+	margin-left: 5px;
+}
+
+.navbar-elem:hover{background-color: var(--cyan2);}
+
+.dropdown{position: relative;}
+
+.dropdown-c{
+	background-color: white;
+	position: absolute;
+	z-index: 10;
+	width: calc(100% - 3px);
+	padding-top: 15px;
+	border: 3px solid var(--cyan);
+	/* 	Transition */
+	opacity: 0;
+	overflow: hidden;
+	max-height: 0px;
+	transition: max-height 0.25s var(--curve-expo);
+	min-width: 150px;
+	overflow: hidden;
+}
+
+.navbar-elem:hover .dropdown-c{
+	opacity: 1;
+	max-height: var(--max-navbar-dropdown-height);
+}
+
+.navbar-elem:not(:hover) .dropdown-c {
+	transition-delay: 1s;
+}
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 1250px) {
+	:root {--navbarwidth: 95vw;}
+	.navbar-void{width: 50%;}
+}
+
+@media screen and (max-width: 825px) {
+	.navbar-void{width: 0%;}
+}

@@ -1,0 +1,32 @@
+main{
+	overflow-x: hidden;
+}
+
+.computing-c, .hardw-c{
+	width: var(--bodywidth);
+	position: relative;
+	margin-top: 50px;
+}
+
+.computing-img-top-c, .computing-img-bottom-c, .computing-txt-c, .hardw-txt-c {width: 50%;}
+.computing-img-top-c{flex-wrap: wrap;}
+
+.computing-txt-c, .hardw-txt-c {
+	padding: 30px;
+	background-color: black;
+}
+
+.photo-frame-centered{margin: 40px auto 40px auto;}
+
+.photo-frame1, .photo-frame2{
+	background-color: white;
+	/* height: 40vh; */
+	max-height: 40%;
+	aspect-ratio: 6/7;
+	margin: auto 35px auto 35px;
+}
+
+.photo-bg{
+	width: 85%;
+	padding-bottom: 15%;
+}

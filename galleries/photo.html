@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content=""/>
+	<meta name="author" content="AIMMXI"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AIMMXI - Photography</title>
+	<link rel="shortcut icon" href="/assets/img/icons/icon.png">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/navbar.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="./photo.css">
+</head>
+
+
+<body>
+	<nav id="navbar" class="navbar flex"></nav>
+
+	<main>
+		<section class="title center">
+			<div class="title-c">
+				<h1>> Photography</h1>
+				<h5 id="photoCaption" class="right-txt"></h5>
+				<div class="title-back"></div>
+			</div>
+		</section>
+
+
+		<section class="abstract flex center">
+			<div class="abstract-txt">
+				<h3>Abstract</h3>
+				<br/>
+				<p>A gallery of pictures I have taken over the years. Mostly nature focused with some urban/industrial clashing in between.</p>
+			</div>
+		</section>
+		<section class="grid-display">
+			<div class="thumb-c" data-filename="2025-02-22.jpg"><img class="thumb" src="./photo/thumbs/2025-02-22_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2024-11-16B.jpg"><img class="thumb" src="./photo/thumbs/2024-11-16B_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2024-11-16A.jpg"><img class="thumb" src="./photo/thumbs/2024-11-16A_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2023-04-12B.jpg"><img class="thumb" src="./photo/thumbs/2023-04-12B_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2023-04-12A.jpg"><img class="thumb" src="./photo/thumbs/2023-04-12A_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2020-10-22.jpg"><img class="thumb" src="./photo/thumbs/2020-10-22_thumb.jpg"></div>
+		</section>
+	</main>
+
+	<footer id="footer" class="footer"></footer>
+
+	<div class="overlay flex flex-hcenter" id="photo-overlay">
+		<div class="overlay-img-c flex flex-vcenter flex-hcenter">
+			<img class="overlay-img" id="photo" src="">
+		</div>
+		<div class="overlay-label-c flex flex-vcenter flex-hcenter">
+			<p id="photo-label" class="overlay-label"></p>
+		</div>
+	</div>
+
+
+	<script src="/assets/js/navbar.js"></script>
+	<script src="/assets/js/footer.js"></script>
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/gallery.js"></script>
+</body>

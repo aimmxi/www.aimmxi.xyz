@@ -1,0 +1,10 @@
+.grid-display{
+	margin: 20px auto 20px auto;
+	width: var(--bodywidth);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: auto;
+	background-color: var(--greyshade);
+	backdrop-filter: blur(10px);
+}

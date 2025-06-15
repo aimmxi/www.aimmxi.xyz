@@ -1,0 +1,301 @@
+/*----------Global---------*/
+
+:root{
+	/* Colours */
+	--transpblack: #000000C0;
+	--transpwhite: #FFFFFF80;
+	--grey: #202020;
+	--greyshade: #2e2e2e80;
+	--cyan: #0ef3ad;
+	--cyan2: #07d5af;
+	--cyandark: #046e6b;
+	--cyansoft: #a4f8de;
+	--bg1: #101d1f;
+	--bg2: #14634f;
+	--visited: #06665c;
+
+	/* Sizes */
+	--navbarwidth: 80vw;
+	--titlewidth: 65vw;
+	--bodywidth: 85vw;
+	--footerwidth: 65vw;
+	
+
+	/* Curves */
+	--curve-quart: cubic-bezier(0.76, 0, 0.24, 1);
+	--curve-expo: cubic-bezier(0.87, 0, 0.13, 1);
+	--curve-overshoot: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+*{font-family: ddin;}
+
+body{
+/* 	background-image: linear-gradient(#14272a, #1a846a); */
+	background-image: linear-gradient(var(--bg1), var(--bg2));
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0px;
+	padding: 0px;
+	min-height: 99vh;
+}
+
+main{padding: 0px;}
+
+/* Headers */
+h1, h2, h3, h4, h5{
+	color: var(--cyan);
+	margin: 0px;
+}
+
+h1{font-size: 64pt;} 	/* Large titles */
+h2{font-size: 48pt;	text-decoration-line: underline; text-decoration-color: var(--cyan);}	/* Abstracts */
+h3{font-size: 36pt;}	/* Article sections */
+h4{font-size: 24pt;} 	/* Smaller stuff */
+h5{font-size: 32pt; font-family: Bytesized; color: white;} 	/* Reserved for captions*/
+
+hr{
+	color: #149b88;
+	margin: 10px auto 10px auto;
+	width: 90%;
+	border-width: 2px 0px 0px 0px;
+	border-style: dotted;
+}
+
+p, i, figcaption, li, code{
+	margin: 0px;
+	font-size: 16pt;
+	margin-bottom: 20px;
+	text-align: justify;
+	color: white;
+	font-family: Gidole;
+}
+
+figcaption{
+	font-size: 12pt;
+	padding-top: 10px;
+	text-align: center;
+}
+
+code{font-family: RobotoCondensed;}
+i{color: var(--cyan);}
+li{margin-bottom: auto;}
+img{margin: auto 5px auto 5px;}
+
+
+
+/* Tables */
+table{
+	color: white;
+	border-spacing: 0px;
+}
+
+td{padding: 10px;}
+
+.row-a{background-color: black;}
+.row-b{background-color: var(--grey);}
+
+
+
+/* Lists */
+ul{list-style-type: square;}
+
+
+
+/* Link styling */
+a:link{
+	color: var(--cyan2);
+	border-color: #000000;
+	transition: background-color 0.5s ease-in-out, border-color 0.3s ease-in-out;
+	font-family: DDIN;
+}
+
+a:hover{
+	background-color: #81818140;
+	border: 2px dashed var(--cyandark);
+	margin: -2px;
+}
+
+a:visited{color: var(--visited);}
+a:active{color: blue;}
+
+.nothover:hover{				/* For links that shouldn't be highlighted */
+	border: 0px none;
+	margin: 0px;
+	background-color: transparent;
+	color: transparent;
+}
+.notvisited:visited{color: var(--cyan2);}
+
+
+
+/* Fonts */
+@font-face{font-family: Bytesized; src: url("/assets/font/Bytesized.ttf");}
+@font-face{font-family: Gidole; src: url("/assets/font/Gidole.ttf");}
+@font-face{font-family: Mussels; src: url("/assets/font/Mussels.otf");}
+@font-face{font-family: VGA; src: url("/assets/font/PerfectVGA437.ttf");}
+@font-face{font-family: Roboto; src: url("/assets/font/Roboto.ttf");}
+@font-face{font-family: RobotoCondensed; src: url("/assets/font/RobotoCondensed.ttf");}
+@font-face{font-family: RobotoCondensedIt; src: url("/assets/font/RobotoCondensedIt.ttf");}
+@font-face{font-family: Supply; src: url("/assets/font/Supply.otf");}
+@font-face{font-family: DDIN; src: url("/assets/font/D-DIN.ttf");}
+@font-face{font-family: DDINBold; src: url("/assets/font/D-DINBold.ttf");}
+@font-face{font-family: UAVOSD; src: url("/assets/font/UAVOSD.ttf");}
+
+.font-fp{font-family: FreePixel;}
+.font-vga{font-family: VGA;}
+.font-hack{font-family: hack;}
+.font-DDIN{font-family: DDIN;}
+.font-DDINBold{font-family: DDINBold;}
+
+.f9{font-size: 9pt;}
+.f12{font-size: 12pt;}
+.f14{font-size: 14pt;}
+.f16{font-size: 16pt;}
+.f20{font-size: 20pt;}
+.f24{font-size: 24pt;}
+.f36{font-size: 36pt;}
+
+.mb-10{margin-bottom: 10px;}
+.mb-20{margin-bottom: 20px;}
+.mb-30{margin-bottom: 30px;}
+
+
+/* Images */
+.img25, .img30, .img40, .img50, .img60, .img70, .img75, .img80, .img90, .img100{padding-bottom:30px;}
+.img25{width: 25%;}
+.img30{width: 30%;}
+.img40{width: 40%;}
+.img50{width: 50%;}
+.img60{width: 60%;}
+.img70{width: 70%;}
+.img75{width: 75%;}
+.img80{width: 80%;}
+.img90{width: 90%;}
+.img100{width: 100%;}
+
+
+/* Macros */
+.center {margin: auto;}
+.center-txt {text-align: center;}
+.right-txt {text-align: right;}
+
+.nomargin{margin: 0px;}
+.noanim{animation: none;}
+
+.block {display: block;}
+.flex {display: flex;}
+.flex-hcenter{justify-content: center;}
+.flex-vcenter{align-items: center;}
+.hidden{visibility: hidden};
+
+.pl10{padding-left: 10px;}
+
+.txt-black{color: black; text-decoration-color: black;}
+.txt-white{color: white;}
+.txt-cyan{color: var(--cyan);}
+
+
+
+/* Common parts of different webpages */
+.title{width: var(--titlewidth);}
+
+.title-c, .title-c-noanim{
+	height: 15vh;
+	min-height: 150px;
+	margin-top: 20px;
+	padding: 20px;
+	background-color: white;
+	background-color: #FFFFFF40;
+	border-left: 3px solid var(--cyan);
+	backdrop-filter: blur(10px);
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.title-c{animation: expand-title 0.75s var(--curve-expo) forwards;}
+.title-c-noanim{width: var(--titlewidth)}
+.typed-caption{color: white;}
+
+.title-back{
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	width: var(--titlewidth);
+	height: 100%;
+	padding: 20px;				/* This has to be the same as title-c*/
+	filter: blur(3px);
+	opacity: 0.2;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+/* Tags */
+.tag-view{
+	margin: 0px 10px 0px auto;
+	height: auto;
+	width: 10%;
+    flex-direction: column;
+	min-width: 170px;
+}
+
+.tag-c{
+	border: 3px solid var(--cyan);
+	width: 100%;
+	margin: 2px;
+}
+
+.tag-img{
+	background-color: var(--cyan);
+	margin: 0px;
+}
+
+.tag-txt{
+	background-color: var(--grey);
+	color: white;
+	margin: 0px 2px 0px 2px;
+	font-family: VGA;
+	text-shadow: black 2px 2px;
+	letter-spacing: -1px;
+	width: 100%;
+}
+
+
+
+/* Common animations */
+@keyframes expand-title{
+	from {width: 0;}
+	to {width: var(--titlewidth);}
+}
+
+
+.throw-photo-left{animation: throw-photo-left 1s var(--curve-quart) forwards;}
+@keyframes throw-photo-left {
+	from {transform: translateX(100vw) rotate(10deg);}
+	to {transform: translateX(0) rotate(-10deg);}
+}
+
+.throw-photo-right{animation: throw-photo-right 1s var(--curve-quart) forwards;}
+@keyframes throw-photo-right {
+	from {transform: translateX(-100vw) rotate(0deg);}
+	to {transform: translateX(0) rotate(10deg);}
+}
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 950px) {
+	:root{--navbarwidth: 95vw;}
+}
+
+@media screen and (max-width: 750px) {
+	:root{	
+		--bodywidth: 95vw;
+		--titlewidth: 95vw;
+		--footerwidth: 95vw;
+	}
+}

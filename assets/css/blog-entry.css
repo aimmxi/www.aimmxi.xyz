@@ -1,0 +1,36 @@
+h2{
+	margin-bottom: 20px;
+}
+
+img{
+	overflow: hidden;
+}
+
+
+.title-c{
+	width: var(--titlewidth);
+	margin-top: 20px;
+	padding: 20px;
+	background-color: white;
+	background-color: #FFFFFF40;
+	border-left: 3px solid var(--cyan);
+	backdrop-filter: blur(10px);
+	overflow: hidden;
+}
+
+.date{padding-top:10px;}
+
+.blog-c{
+	width: var(--bodywidth);
+	position: relative;
+	margin-top: 50px;
+	background-color: black;
+}
+
+.blog-c-txt{padding: 40px;}
+
+.details{
+	margin: auto 0px auto auto;
+	border-left: 3px dotted var(--cyan);
+	padding-left: 15px;
+}
