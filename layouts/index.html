@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/anims.css">
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
+<body id="body">
+	<!-- Splash screen -->
+	<div id="splash-c" class="splash-c flex flex-hcenter flex-vcenter">
+		<div class="disclaimer">
+			<div class="disclaimer-body">
+				<h1 class="f36 mb-20">Disclaimer</h1>
+				<p class="mb-10">This website is mostly based on HTML and CSS, but uses some custom Javascript for small animations and reactive behaviour. A Javascript-capable browser is required for rendering this webpage.</p>
+				<p>No cookies, analytics or any form of tracking are used. Your visit is private.</p>
+			</div>
+			<div class="disclaimer-footer flex">
+				<div class="disclaimer-footer-link flex flex-hcenter">
+					<a id="splash-button" class="f24 font-DDINBold">Enter</a>
+				</div>
+				<div class="disclaimer-footer-sig">
+					<img class="signature" src="/assets/img/signature.svg" width=35px>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Spinning logo -->
+	<header class="logo float center-txt">
+		<div class="rotate center">
+			<div class="grow center">
+				<img class="logo-img" src="/assets/img/logo.png">
+			</div>
+		</div>
+		<div class="tld rotate-backwards">
+			<img class="tld-img" src="/assets/img/tld.png">
+		</div>
+	</header>
+
+	<!-- Main container and footer -->
+	<main class="main-section flex flex-hcenter">
+		<section class="about-c floatslow">
+			<div class="about-header flex flex-vcenter">
+				<img height=42px src="/assets/img/icons/about.svg">
+				<p class="header-txt font-DDINBold txt-black f20">About</p>
+			</div>
+			<div class="about-body moody-blur">
+				<p class="f20">> <a href="/about/bio/">Biography</a></p>
+				<p class="f20">> <a href="/about/specs/">Hardware & Specs</a></p>
+				<p class="f20">> <a href="/about/blog/">Blog & Updates</a></p>
+			</div>
+		</section>
+		<section class="projects-c floatslow">
+			<div class="projects-header flex flex-vcenter">
+				<img height=42px src="/assets/img/icons/projects.svg">
+				<p class="header-txt font-DDINBold txt-black f20">Projects</p>
+			</div>
+			<div class="projects-body moody-blur">
+				<p class="f20">> <a href="/assets/html/wip/">Agriculture</a></p>
+				<p class="f20">> <a href="/projects/computing/">Computing</a></p>
+				<p class="f20">> <a href="/projects/misc/">Miscellaneous</a></p>
+			</div>
+		</section>
+		<section class="galleries-c floatslow">
+			<div class="galleries-header flex flex-vcenter">
+				<img height=42px src="/assets/img/icons/galleries.svg">
+				<p class="header-txt font-DDINBold txt-black f20">Galleries</p>
+			</div>
+			<div class="galleries-body moody-blur">
+				<p class="f20">> <a href="/galleries/models.html">Models</a></p>
+				<p class="f20">> <a href="/galleries/photo.html">Photography</a></p>
+			</div>
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/splash.js"></script>
+</body>

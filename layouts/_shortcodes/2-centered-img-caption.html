@@ -1,0 +1,10 @@
+<div class="flex flex-vcenter flex-hcenter">
+	<figure>
+		<img class="img100" src="{{ .Get 0 }}">
+		<figcaption>{{ .Get 1 | safeHTML }}</figcaption>
+	</figure>
+	<figure>
+		<img class="img100" src="{{ .Get 2 }}">
+		<figcaption>{{ .Get 3 | safeHTML }}</figcaption>
+	</figure>
+</div>

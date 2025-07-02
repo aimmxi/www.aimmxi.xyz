@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="./specs.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		<section class="computing-c flex center">
+			<div class="computing-img-top-c flex flex-vcenter flex-hcenter">
+				<div class="photo-frame-centered throw-photo-right-js hidden">
+					<div class="photo-frame1 flex flex-hcenter">
+						<img class="photo-bg" src="./img/pc.gif">
+					</div>
+				</div>
+				<div class="photo-frame-centered throw-photo-right-js hidden">
+					<div class="photo-frame2 flex flex-hcenter">
+						<img class="photo-bg" src="./img/lap.gif">
+					</div>
+				</div>
+			</div>
+			<div class="computing-txt-c">
+				<h2>Computing</h2>
+				<br>
+				<p>My main computer is a 14" <i>Dell Latitude 5420</i> with the following specs:</p>
+				<ul>
+					<li><i>CPU:</i> Intel i7-1185G7 4-core @ 3GHz</li>
+					<li><i>GPU:</i> Integrated Intel Xe 96EU</li>
+					<li><i>RAM:</i> 16 GB DDR4 3200MHz</li>
+					<li><i>SSD:</i> Hynix HFS512GD9TNG NVMe</li>
+					<li><i>NIC:</i> Intel AX201</li>
+					<li><i>Display:</i> 1920x1080 LCD screen</li>
+				</ul>
+				<p>I use a laptop most of the time because I don't have a fixed workspace and I need to use computers on the go. Syncing files across devices is awkward and since this laptop is power efficient by x86 standards, light, portable and powerful enough to handle VMs swiftly and most workloads, I use it for nearly everything.</p>
+
+				<p>I do have a setup at home that I use whenever possible; it consists of an USB-C docking station that combines all the cables into a single one that can be plugged directly into my laptop. The peripherals I use are a cheap Innobo Golab membrane keyboard, a Logitech G203 Lightsync mouse, an LG 24MP59G-P 24" IPS monitor and a Razer Nari headset.</p>
+
+				<p>I have a <i>custom-built desktop</i> computer that I use exclusively for gaming, heavy workloads or as a backup computer. It has the following specs:</p>
+				<ul>
+					<li><i>CPU:</i> AMD Ryzen 7 2700 8-core @ 3.2GHz</li>
+					<li><i>GPU:</i> AMD Radeon RX 6600 XT XFX Merc 308</li>
+					<li><i>RAM:</i> Corsair Vengeance 16 GB DDR4 3200MHz</li>
+					<li><i>Motherboard:</i> ASUS ROG Strix B450-F Gaming</li>
+					<li><i>SSD:</i> Kingston 240GB 2,5" SATA</li>
+					<li><i>HDD:</i> Seagate Barracuda 2TB 7200 RPM 3,5"</li>
+					<li><i>Case:</i> Thermaltake H200</li>
+				</ul>
+
+				<p>None of the previous machines are used for server purposes. Most of my 'servers' are <i>single board computers</i>. SBCs are a great alternative to full x86 computers because of their size, low energy consumption and the ability to be run in a passive cooling configuration without any noise. I currently have a Raspberry Pi 3B, Raspberry Pi 4, Orange Pi Zero 2 and Orange Pi 5 Pro in production for various tasks. I go into a bit more depth in my <a href="/projects/computing/homelab.html">homelab's article</a>.</p>
+
+				<p>I also have some other old machines laying around, most don't have a specific purpose and are stored just in case I need them in the future. I've reused an old HP SFF desktop as a storage and backup server with two 500GB drives.</p>
+
+				<p><i>Operating system</i> wise, all my computers run some flavour of Linux. I use <i>ArchLinux</i> for my main computers because I like the rolling release model; however, I use Debian for my servers because of its stability. My desktop computer also runs Windows in a dual boot configuration, because sadly not every piece of software is compatible with Wine, Proton or Linux. My desktop environment of preference is <i>KDE Plasma with the KDE Applications suite</i> because they are complete, well-designed, and integrate together neatly.</p>
+
+			</div>
+		</section>
+		<section class="hardw-c flex center">
+			<div class="hardw-txt-c">
+				<h2>Other hardware</h2>
+				<br>
+				<p>The <i>3D printer</i> used in all of my projects is a <i>Creality Ender 3 S1 Pro</i> that I share with a friend, paired with Prusa Slicer and with a bit of a speed tweak. We have tried plenty of different filaments and found out that as long as you avoid buying the cheapest one available, you will be fine most of the time. PLA from Elegoo is my preferred choice because it is reasonably priced and performs well.</p>
+				<br>
+				<p>My <i>camera</i> is a <i>Sony a5100</i> with its stock SELP1650 lens (f/3.5-5.6, 16-50mm). I like it's compact form factor, as I often take it with me and a larger camera would be much more cumbersome.</p>
+
+				<p>Most of my other equipment is not relevant and pretty much all of the tools I use for larger projects are store-branded or unremarkable. Perhaps the most interesting one is the Parkside SMD soldering station I use for my elecronics projects; which is not exceptional, but its low price makes up for its modest performance.</p>
+			</div>
+			<div class="computing-img-bottom-c flex flex-vcenter flex-hcenter">
+				<div class="photo-frame-centered throw-photo-left-js hidden">
+					<div class="photo-frame1 flex flex-hcenter">
+						<img class="photo-bg" src="./img/printer.gif">
+					</div>
+				</div>
+				<div class="photo-frame-centered throw-photo-left-js hidden">
+					<div class="photo-frame2 flex flex-hcenter">
+						<img class="photo-bg" src="./img/camera.gif">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/throw-photo.js"></script>
+</body>

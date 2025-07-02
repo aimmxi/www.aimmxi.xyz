@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="./bio.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+  		<img src="/assets/img/ff.png" class="ff" style="left:10vw; top:15vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:5vw; top:70vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:40vw; top:10vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:40vw; top:50vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:30vw; top:80vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:70vw; top:40vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:80vw; top:75vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:70vw; top:20vh;">
+  		<img src="/assets/img/ff.png" class="ff" style="left:90vw; top:70vh;">
+
+		<section class="showcase flex center">
+			<div class="large-img-c flex">
+				<img class="large-img" src="./img/bio_photo.gif">
+			</div>
+			<div class="vertical-separator center"></div>
+			<div class="intro-txt-c">
+				<div class="header flex flex-hcenter flex-vcenter">
+					<h1 id="font-flick" class="font-flick txt-white">AIMMXI</h1>
+				</div>
+				<!-- TODO Only one tag can have that id, change it somehow -->
+				<h5 id="typeText" data-subtext="{{ .Params.Caption1 }}" data-speed="{{ .Params.Speed1 }}" data-timeout="{{ .Params.Timeout }}" class="intro-txt font-DDIN"></h5>
+				<h5 id="typeText" data-subtext="{{ .Params.Caption2 }}" data-speed="{{ .Params.Speed2 }}" data-timeout="{{ .Params.Timeout }}" class="intro-txt font-DDIN"></h5>
+				<h5 id="typeText" data-subtext="{{ .Params.Caption3 }}" data-speed="{{ .Params.Speed3 }}" data-timeout="{{ .Params.Timeout }}" class="intro-txt font-DDIN"></h5>
+				<br>
+				<h5 id="typeText" data-subtext="{{ .Params.Caption4 }}" data-speed="{{ .Params.Speed4 }}" data-timeout="{{ .Params.Timeout }}" class="intro-txt font-DDIN"></h5>
+			</div>
+		</section>
+		<section class="desc-c flex center">
+			<div class="desc-txt">
+				<h2>About me</h2>
+				<br>
+				<p>I am AIMMXI (Ax for short), a CS student based in northern Spain that loves creating, experimenting and tinkering with technology amongst many other things.</p>
+
+				<p>I have always been drawn to intricate creations that are beyond my understanding; it sparks my curiosity and delving into their inner workings is really satisfying and interesting. Computers, for example, are incredibly complex and practically limitless in terms of what they enable you to do.</p>
+
+				<p>After years of being a spectator of other people's creations I came to the conclusion that I wanted to contribute to the world with my very own creative projects. In 2021, I started developing and building my own projects, and since then, I have been looking forward to learning new skills and making new inventions.</p>
+
+				<p>I have plenty of hobbies and interests, but I would consider my main ones to be the following:</p>
+
+			</div>
+			<div class="photo-c flex flex-vcenter throw-photo-left-js hidden">
+				<div class="photo-frame flex flex-hcenter">
+					<img class="photo" src="./img/bio_photo2.png">
+				</div>
+			</div>
+		</section>
+		<section class="insights-c flex center">
+			<div class="insight1 txt-white">
+				<h2>Technology</h2>
+				<br>
+				<p>Due to my background in CS and IT, I've grown to like all things technology-related, such as <i class="txt-cyan">electronics</i> and materializing things through practical <i class="txt-cyan">3D modeling</i>  and 3D printing. Of course, I still enjoy some other IT-related activities such as <i class="txt-cyan">systems administration</i> or some casual <i class="txt-cyan">programming</i> sessions from time to time.</p>
+			</div>
+			<div class="insight2">
+				<h2 class="txt-black">Nature</h2>
+				<br>
+				<p class="txt-black">For several years computing stood out as my main hobby, but since I was raised in a rural area, <i class="txt-white">nature</i> and <i class="txt-white">agriculture</i> were part of my childhood, and I have grown to like them even more. I enjoy strolls through natural, quiet environments and occasionally participate in <i class="txt-white">photography</i>.</p>
+			</div>
+			<div class="insight3 txt-black">
+				<h2 class="txt-black">Tinkering</h2>
+				<br>
+				<p class="txt-black">More recently I've developed an interest in tinkering and creating physical objects. I've started to learn about <i>woodworking</i> as well as basic <i>mechanical engineering</i> to aid with larger projects. There's plenty of other miscellaneous, much smaller topics I enjoy, but since I do not have the time to pursue all of them, it remains mostly insignificant.</p>
+			</div>
+		</section>
+		<section class="flex center abtpage-c">
+			<div class="abtpage-txt t">
+				<h2 class="txt-black">About this webpage</h2>
+				<br>
+				<p class="txt-black"> This webpage is meant to be a homepage/portfolio and an archive of my main projects. Since social networks are lacking in terms of customization and freedom, a webpage allows me to organize all of my work and thoughts as I want. It is also a fun project in itself. Designing something that is aesthetically pleasing, lightweight, minimalistic, consistent, and functional from scratch.</p>
+
+				<p class="txt-black">If you want to give me a heads up, report an erratum, ask any questions or just send a greeting, you can mail me at <i>aimmxi(at)aimmxi(dot)xyz</i>. I will be more than glad to reply to you; feedback is always appreciated !</p>
+
+				<p class="txt-black">If you like my work, please consider donating, as keeping a server up has operating costs. I currently only accept crypto in the form of <a href="/assets/files/btc.txt">Bitcoin</a> or <a href="/assets/files/xmr.txt">Monero</a> for privacy reasons (Sorry for the inconvenience).</p>
+
+				<p class="txt-black">Thanks for the visit and I hope you enjoy your stay :]</p>
+				
+				<img src="/assets/img/signature-docked.svg" width=50px>
+
+			</div>
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/font-flick.js"></script>
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/throw-photo.js"></script>
+	<script src="/assets/js/fireflies.js"></script>
+</body>

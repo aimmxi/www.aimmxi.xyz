@@ -1,0 +1,14 @@
+ASSETS:
+    - Background by Kelly Doroteo (https://unsplash.com/photos/green-leafed-tree-in-closeup-photography-KNohnzKmLTY)
+    - Non-custom icons part of the KDE Breeze icon set.
+
+
+
+FONTS:
+    - Arcane ANSI font by Roy/SAC (http://www.roysac.com/)
+    - Bytesized by Baltdev (https://fonts.google.com/specimen/Bytesized)
+    - D-DIN by Datto (https://github.com/amcchord/datto-d-din)
+    - Gidole by Andreas Larsen (https://fonts.google.com/specimen/Gidole)
+    - Mussels by TypeType Foundry (https://www.dafont.com/tt-mussels.font)
+    - Perfect DOS VGA 437 by Zeh Fernando (https://www.dafont.com/perfect-dos-vga-437.font?text=VGA+437)
+    - Roboto by Christian Robertson, Paratype, Font Bureau (https://fonts.google.com/specimen/Roboto)

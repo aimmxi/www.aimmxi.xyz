@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="./blog.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		<section class="abstract flex center">
+			<div class="abstract-txt">
+				<h2>Abstract</h2>
+				<br/>
+				<p>A place to keep all my personal reflections, questions and any other topic that is worth mentioning. The website's changelog, content updates and credits to the owners of some assets are also available down below. </p>
+			</div>
+		</section>
+
+		<section class="other-links center flex">
+			<div class="center">
+				<div class="tag-c flex">
+					<img class="tag-img" src="../../assets/img/icons/git.svg" width=40px>
+					<p class="tag-txt flex flex-vcenter flex-hcenter"><a href="/assets/files/platform-updates.txt">Changelog</a></p>
+				</div>
+			</div>
+			<div class="center">
+				<div class="tag-c flex">
+					<img class="tag-img" src="../../assets/img/icons/question.svg" width=40px>
+					<p class="tag-txt flex flex-vcenter flex-hcenter"><a href="/assets/files/content-updates.txt">Content updates</a></p>
+				</div>
+			</div>
+			<div class="center">
+				<div class="tag-c flex">
+					<img class="tag-img" src="../../assets/img/icons/user.svg" width=40px>
+					<p class="tag-txt flex flex-vcenter flex-hcenter"><a href="/assets/files/credits.txt">Credits</a></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="blog-main flex center">
+			<table class="blog-table f16 center-txt">
+				<tr class="blog-table-header f20">
+					<th class="blog-table-header">Date</th>
+					<th class="blog-table-header">Type</th>
+					<th class="blog-table-header">Title</th>
+				</tr>
+
+				<!-- Define a counter for the background of the table to change between A and B -->
+				{{ $counter := 1 }}
+
+				<!-- For each item that uses blog-post as a layout, draw a row -->
+				{{ range where .Site.Pages "Layout" "blog-post"}}
+					<!-- If the counter is odd, type b, if else type b -->
+					{{ if mod $counter 2 }}				
+						<tr class="row-b">
+			  		{{ else }}
+						<tr class="row-a">
+			  		{{ end }}
+
+						<td class="date">{{ .Date | dateFormat "2006-01-02" }}</td>
+						<td class="type">{{ .Type }}</td>
+						<td class="subject"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+					</tr>
+					
+					<!-- The counter gets increased -->
+					 {{ $counter = add $counter 1 }}
+			  	{{ end }}
+			</table>
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/type-text.js"></script>
+</body>

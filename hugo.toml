@@ -1,0 +1,16 @@
+baseURL = 'https://www.aimmxi.xyz/'
+languageCode = 'en-us'
+title = 'AIMMXI'
+disableKinds = ["taxonomy", "term"]
+
+disableHugoGeneratorInject = true
+disableLiveReload = true
+
+[params]
+  description = "AIMMXI's personal website and a repository of projects and content"
+
+[outputs]
+  home = ["HTML"]
+
+[security]
+  enableInlineShortcodes = true

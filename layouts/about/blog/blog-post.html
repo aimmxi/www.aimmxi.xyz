@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/blog-entry.css">
+</head>
+
+
+<body>
+    {{ partial "navbar.html" . }}
+
+	<main>
+		<section class="title-c-noanim center flex-vcenter flex">
+			<h1 class="f36">> {{ .Title }} </h1>
+			<div class="details">
+				<h3 class="date"> {{ .Date | dateFormat "2006-01-02" }}</h3>
+				<p>By AIMMXI</p>
+			</div>
+		</section>
+
+		<section class="blog-c flex center">
+			<div class="blog-c-txt">
+                {{ .Content }}
+			</div>
+		</section>
+	</main>
+
+    {{ partial "footer.html" . }}
+</body>

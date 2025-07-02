@@ -1,0 +1,103 @@
+/* Index */
+
+body{
+	background-color: #0b1507;
+	background-image: url("assets/img/bgs/bg.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+	background-position: center;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+p{margin: 0px;}
+
+.moody-blur {
+	background-color: #00000008;
+	backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo{
+	width: 40%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.tld{
+	z-index: 1;
+	margin-top: -25%;
+	padding-left: 60%;
+	position: relative;
+}
+
+.logo-img, .tld-img{width: 100%;}
+.header-txt{margin: 0px;}
+
+.main-section{
+	width: 85vw;
+	margin: 75px auto 50px auto;
+	flex-wrap: wrap;
+}
+
+.about-c, .projects-c, .galleries-c{
+	width: 350px;
+	margin: auto 20px auto 20px;
+	border: 3px solid var(--cyan);
+	border-top: 0px;
+}
+
+.projects-c{margin-top: 50px;}
+.galleries-c{margin-top: 20px;}
+
+.about-header, .projects-header, .galleries-header{
+	background-color: var(--cyan);
+	padding: 5px;
+}
+
+.about-body, .projects-body, .galleries-body{
+	padding: 20px;
+	border-top: 0px;
+}
+
+/* Splash related stuff */
+.splash-c{
+	position: absolute;
+	z-index: 5;
+	width: 100vw;
+	height:100vh;
+	background-color: #000000C0;
+	backdrop-filter: blur(20px);
+	transition: opacity 0.5s ease;
+}
+
+.disclaimer{
+	max-width: 30vw;
+	min-width: 300px;
+	border: 3px solid var(--cyan);width: 100%;
+	border-bottom: 0px;
+}
+
+.disclaimer-body{
+	background-color: black;
+	padding: 20px;
+}
+
+.disclaimer-footer{
+	border: 3px solid var(--cyan);
+}
+
+.disclaimer-footer-link, .disclaimer-footer-sig {
+	padding: 10px;
+	background-color: var(--cyan);
+}
+
+.disclaimer-footer-link{
+	width: 100%;
+	margin-right: 5px;
+}
+
+.animate {transform: translate(100%, -100%);}
+.fade{opacity: 0;}
+

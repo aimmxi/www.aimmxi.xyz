@@ -1,0 +1,41 @@
+body{
+	background-image: url("/assets/img/bgs/bg.gif");
+	background-color: #071511;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment:fixed;
+	background-position: center;
+    overflow: hidden;
+}
+
+main{
+    width:100vw;
+    height:100vh;
+    flex-direction: column;
+    display: flex;
+}
+.main-box{
+    width: fit-content;
+}
+
+.textbox{
+    border-left: 3px solid var(--cyan);
+    padding: 20px;
+    margin: 20px;
+}
+
+.error-desc{
+    padding-top: 20px;
+}
+
+.bg-noise{
+    background: url("/assets/img/bgs/noise.png");
+    opacity: 0.095;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+}
+
+
