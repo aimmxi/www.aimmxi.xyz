@@ -2,7 +2,7 @@
 title: "Why window managers are not always the way"
 date: 2024-09-30
 layout: "blog-post"
-type: "Article"
+tag: "Article"
 ---
 
 ### What about Window Managers?
@@ -36,21 +36,9 @@ This design fits the UNIX philosophy of "do one thing and do it well" and by com
 
 As a bit of a tangent, there is also a slew of minimalist software that follows this philosophy and sort of further improves the experience and automation capabilities. [Suckless'](https://suckless.org/)> software is probably the most famous amongst Linux enthusiasts. As a side effect of such minimalism, WMs are outstanding at performance on old or underpowered hardware.
 
-
-<div class="flex flex-vcenter flex-hcenter">
-	<figure>
-		<img class="img100" src="./img/2024-09-30_BSPWMRice.gif">
-		<figcaption>BSPWM rice from <a href="https://www.reddit.com/r/unixporn/comments/orhmk7/bspwm_misty_mountains_feat_onedark/">u/R1ce_Man on Reddit</a></figcaption>
-	</figure>
-	<figure>
-		<img class="img100" src="./img/2024-09-30_KDERice.gif">
-		<figcaption>My current KDE Plasma 6 rice</figcaption>
-	</figure>
-</div>
-
 {{< 2-centered-img-caption 
-    "./img/bspwm-rice.jpg" "BSPWM rice from <a href='https://www.reddit.com/r/unixporn/comments/orhmk7/bspwm_misty_mountains_feat_onedark/'>u/R1ce_Man on Reddit</a>" 
-    "./img/kde-rice.jpg" "My current KDE Plasma 6 rice.">}}
+    "./bspwm-rice.jpg" "BSPWM rice from <a href='https://www.reddit.com/r/unixporn/comments/orhmk7/bspwm_misty_mountains_feat_onedark/'>u/R1ce_Man on Reddit</a>" 
+    "./kde-rice.jpg" "My current KDE Plasma 6 rice.">}}
 
 ### The things Window Managers are not good at
 As previously mentioned, a WM is just a component; in order to get a fully functional desktop interface, the user will need to research, configure and troubleshoot a few more programs. Said programs need to cooperate. For instance, a hotkey daemon needs to call the specific commands that another program offers. This sacrifices portability as changing a piece often requires modifying several other components.

@@ -55,8 +55,8 @@
 						<tr class="row-a">
 			  		{{ end }}
 
-						<td class="date">{{ .Date | dateFormat "2006-01-02" }}</td>
-						<td class="type">{{ .Type }}</td>
+						<td class="date">{{ .Params.Date | dateFormat "2006-01-02" }}</td>
+						<td class="type">{{ .Params.Tag }}</td>
 						<td class="subject"><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
 					</tr>
 					

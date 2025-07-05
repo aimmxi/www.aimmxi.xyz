@@ -14,3 +14,8 @@ disableLiveReload = true
 
 [security]
   enableInlineShortcodes = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
