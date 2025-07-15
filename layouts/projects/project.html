@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/project.css">
+</head>
+
+<body>
+	{{ partial "navbar.html" . }}
+	
+	<main>
+		<section class="showcase-c flex">
+			<div class="showcase-img-c">
+				{{ if eq .Params.Showcase "image" }}
+					<img class="showcase-img" src="./showcase.jpg">
+				{{ end }}
+				{{ if eq .Params.Showcase "video" }}
+					<video src="./showcase.webm" controls muted loop></video>
+				{{ end }}
+			</div>
+			<div class="showcase-hoverable flex flex-vcenter">
+				<img src="/assets/img/icons/arrows-back.svg">
+				<div class="showcase-txt-c">
+					<div class="showcase-txt flex">
+						<h1 class="f36">{{ .Params.Title }}</h1>
+						<i class="f20">{{ .Params.Datestr }}</i>
+						<p class="showcase-desc">{{ .Params.Abstract}}</p>
+						<div class="showcase-tags flex">
+							{{ range .Params.Tags }}
+  								{{ if eq . "Electronics" }}
+									{{ partial "tags/electronics.html"}}
+  								{{ end }}
+  								{{ if eq . "Handcrafts" }}
+									{{ partial "tags/handcrafts.html"}}
+  								{{ end }}
+  								{{ if eq . "Hardware" }}
+									{{ partial "tags/hardware.html"}}
+  								{{ end }}
+  								{{ if eq . "Modelling" }}
+									{{ partial "tags/modelling.html"}}
+  								{{ end }}
+  								{{ if eq . "Software" }}
+									{{ partial "tags/software.html" . }}
+  								{{ end }}
+							{{ end }}
+						</div>
+						<div class="toc">
+							<h4 class="f20">Index</h4>
+							{{ .TableOfContents }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="content-c">
+			<h1>{{ .Params.Title }}</h1>
+            {{ .Content }}
+		</section>
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>

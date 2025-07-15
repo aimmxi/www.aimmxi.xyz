@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/project.css">
+	<link rel="stylesheet" type="text/css" href="./website.css">
+</head>
+
+<body>
+	{{ partial "navbar.html" . }}
+	
+	<main>
+		<section class="logo-c flex float">
+				<img class="logo" src="/assets/img/logo.png">
+				<img class="tld checkthis" src="/assets/img/tld.png">
+		</section>
+		
+		<section class="content-c">
+			<h1>{{ .Params.Title }}</h1>
+            {{ .Content }}
+		</section>
+</main>
+
+<footer id="footer" class="footer"></footer>
+
+</body>

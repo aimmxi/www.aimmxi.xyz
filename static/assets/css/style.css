@@ -61,7 +61,7 @@ hr{
 	border-style: dotted;
 }
 
-p, i, figcaption, li, code{
+p, i, figcaption, li, code, em{
 	margin: 0px;
 	font-size: 16pt;
 	margin-bottom: 20px;
@@ -77,7 +77,7 @@ figcaption{
 }
 
 code{font-family: RobotoCondensed;}
-i{color: var(--cyan);}
+i, em{color: var(--cyan);}
 li{margin-bottom: auto;}
 img{margin: auto 5px auto 5px;}
 
@@ -155,9 +155,6 @@ a:active{color: blue;}
 .f24{font-size: 24pt;}
 .f36{font-size: 36pt;}
 
-.mb-10{margin-bottom: 10px;}
-.mb-20{margin-bottom: 20px;}
-.mb-30{margin-bottom: 30px;}
 
 
 /* Images */
@@ -175,9 +172,13 @@ a:active{color: blue;}
 
 
 /* Macros */
-.center {margin: auto;}
-.center-txt {text-align: center;}
-.right-txt {text-align: right;}
+.center{margin: auto;}
+.center-txt{text-align: center;}
+.right-txt{text-align: right;}
+
+.mb-10{margin-bottom: 10px;}
+.mb-20{margin-bottom: 20px;}
+.mb-30{margin-bottom: 30px;}
 
 .nomargin{margin: 0px;}
 .noanim{animation: none;}

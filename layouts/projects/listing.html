@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/listing.css">
+</head>
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		{{ partial "abstract.html" . }}
+
+		<section class="listing-main center">
+			<!-- For all computing projects, ordered by name in descending order and date -->
+			{{ $current := . }}
+
+			{{ range sort (sort (where .Site.Pages ".Params.Category" $current.Params.Categorygroup) ".Title" "desc") ".Params.Datestr" "desc"}}
+				<div class="listing-elem flex">
+					<div class="listing-img-c flex flex-vcenter">
+						<img class="listing-img" src="{{ .RelPermalink }}/thumb.png"/>
+					</div>
+
+					<!-- Main fields -->
+					<div class="listing-txt-c">
+						<h4>{{ .Title }}</h4>
+						<i class="f12">{{ .Params.Datestr }}</i>
+						<div class="listing-desc flex flex-vcenter">
+							<p class="listing-txt">{{ .Params.Abstract }}</p>
+						</div>
+					</div>
+
+					<!-- Adds the tags -->
+					<div class="tag-view flex flex-vcenter flex-hcenter">
+						{{ range .Params.Tags }}
+  							{{ if eq . "Electronics" }}
+								{{ partial "tags/electronics.html"}}
+  							{{ end }}
+  							{{ if eq . "Handcrafts" }}
+								{{ partial "tags/handcrafts.html"}}
+  							{{ end }}
+  							{{ if eq . "Hardware" }}
+								{{ partial "tags/hardware.html"}}
+  							{{ end }}
+  							{{ if eq . "Modelling" }}
+								{{ partial "tags/modelling.html"}}
+  							{{ end }}
+  							{{ if eq . "Software" }}
+								{{ partial "tags/software.html" . }}
+  							{{ end }}
+						{{ end }}
+					</div>
+
+					<div class="listing-view flex flex-vcenter flex-hcenter">
+						<a class="view-link f24" href="{{ .RelPermalink }}">View ></a>
+					</div>
+				</div>
+			{{ end }}
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/type-text.js"></script>
+</body>

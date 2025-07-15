@@ -1,0 +1,15 @@
+<div class="project-link-c flex">
+	<p class="project-link-txt flex flex-vcenter font-DDINBold">{{ .Get 0 }}</p>
+	<a class="project-link flex flex-vcenter" href="/galleries/models/files/{{ .Get 1 }}-blend.tar.gz">
+		<img src="/assets/img/icons/blender.svg" width="30px">
+		.blend
+	</a>
+	<a class="project-link flex flex-vcenter" href="/galleries/models/files/{{ .Get 1 }}-stl.tar.gz">
+		<img src="/assets/img/icons/misc.svg" width="30px">
+		.stl
+	</a>
+	<a class="project-link flex flex-vcenter" href="{{ .Get 2 }}">
+		<img src="/assets/img/icons/thingiverse.png" width="30px">
+		Thingiverse
+	</a>
+</div>

@@ -1,4 +1,4 @@
 <figure>
 	<img class="block center img30" src="{{ .Get 0 }}">
-	<figcaption>{{ .Get 1 }}</figcaption>
+	<figcaption>{{ .Get 1 | safeHTML }}</figcaption>
 </figure>

@@ -16,6 +16,9 @@ disableLiveReload = true
   enableInlineShortcodes = true
 
 [markup]
+  [markup.tableOfContents]
+    startLevel = 3
+    endLevel = 3
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true

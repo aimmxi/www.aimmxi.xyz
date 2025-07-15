@@ -1,0 +1,7 @@
+<figure>
+	{{ if .Get 1 }}
+		<img class="block center {{ .Get 1 }}" src="{{ .Get 0 }}">
+	{{ else }}
+		<img class="block center img30" src="{{ .Get 0 }}">
+	{{ end }}
+</figure>
