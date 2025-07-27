@@ -3,7 +3,7 @@ const overlay = document.getElementById('photo-overlay');
 const photo = document.getElementById('photo');
 const label = document.getElementById('photo-label');
 
-const photoPath = "./photo/img/";
+const photoPath = "./img/";
 
 // For each thumbnail, add display trigger for the overlay
 thumbs.forEach(thumb => {

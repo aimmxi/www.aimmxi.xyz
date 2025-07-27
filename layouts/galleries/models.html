@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="./models.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		{{ partial "abstract.html" . }}
+
+		<section class="grid-display">
+			{{ $models := where .Site.RegularPages "File.Dir" "eq" "galleries/models/" }}
+			{{ $sorted := sort $models "Params.index" "desc" }}
+
+
+    		{{ range $sorted }}
+				<div class="model flex">
+						<img class="model-img" src="/galleries/models/thumbs/{{ .Params.Thumb }}">
+						<div class="model-body">
+							<h4 class="f16">{{ .Title }}</h4>
+							<i class="f12 txt-cyan mb-10 block">{{ .Params.Subtitle }}</i>
+							<p class="model-desc">{{ .Params.Description }}</p>
+							<p class="model-credits">{{ .Params.Credits | markdownify }}</p>
+						</div>
+						<div class="model-footer flex">
+							<div class="model-footer-download-c flex flex-vcenter">
+								<a href="/galleries/models/files/{{ .Params.Filename }}-blend.tar.gz" class="download-link flex flex-vcenter"><img src="/assets/img/icons/blender.svg" width=24px>.blend</a>
+								<a href="/galleries/models/files/{{ .Params.Filename }}-stl.tar.gz" class="download-link flex flex-vcenter"><img src="/assets/img/icons/misc.svg" width=24px>.stl</a>
+							</div>
+							<div class="model-footer-links-c flex flex-vcenter">
+								<a href="{{ .Params.Thingiverse }}" class="thingiverse-link flex flex-vcenter"><img src="/assets/img/icons/thingiverse.png" width=24></a>
+							</div>
+						</div>
+				</div>
+				{{ end }}
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<div class="overlay flex flex-hcenter" id="photo-overlay">
+		<div class="overlay-img-c flex flex-vcenter flex-hcenter">
+			<img class="overlay-img" id="photo" src="">
+		</div>
+		<div class="overlay-label-c flex flex-vcenter flex-hcenter">
+			<p id="photo-label" class="overlay-label"></p>
+		</div>
+	</div>
+
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/gallery.js"></script>
+</body>

@@ -1,6 +1,6 @@
 <section class="abstract flex center">
     <div class="abstract-txt">
         <h2 class="mb-20">Abstract</h2>
-        <p>{{ .Params.Abstract }}</p>
+        <p>{{ .Params.Abstract | markdownify }}</p>
     </div>
 </section>

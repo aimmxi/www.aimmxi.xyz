@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="./photo.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		{{ partial "abstract.html" . }}
+
+		<section class="grid-display">
+			<!-- <div class="thumb-c" data-filename="2025-02-22.jpg"><img class="thumb" src="./thumbs/2025-02-22_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2024-11-16B.jpg"><img class="thumb" src="./thumbs/2024-11-16B_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2024-11-16A.jpg"><img class="thumb" src="./thumbs/2024-11-16A_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2023-04-12B.jpg"><img class="thumb" src="./thumbs/2023-04-12B_thumb.jpg"></div>
+			<div class="thumb-c" data-filename="2023-04-12A.jpg"><img class="thumb" src="./thumbs/2023-04-12A_thumb.jpg"></div> -->
+			
+			{{ range .Params.images }}
+					<div class="thumb-c" data-filename="{{ . }}"><img class="thumb" src="./thumbs/{{ . }}"></div>
+			{{ end }}
+
+
+			{{ range .Resources.ByType "image" }}
+  				<img src="{{ .RelPermalink }}" alt="{{ .Name }}" style="max-width: 300px;">
+			{{ end }}
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<div class="overlay flex flex-hcenter" id="photo-overlay">
+		<div class="overlay-img-c flex flex-vcenter flex-hcenter">
+			<img class="overlay-img" id="photo" src="">
+		</div>
+		<div class="overlay-label-c flex flex-vcenter flex-hcenter">
+			<p id="photo-label" class="overlay-label"></p>
+		</div>
+	</div>
+
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/gallery.js"></script>
+</body>
