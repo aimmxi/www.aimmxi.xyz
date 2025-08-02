@@ -1,2 +1,6 @@
+Platform update 1.1r0 (2025-08-02):
+    - Ported the entire website to Hugo
+    - Fixed some small errata with already existing articles
+
 Platform update 1.0r0 (2025-06-09):
     - Initial commit

@@ -7,6 +7,14 @@
     <language>en-us</language>
 
     <item>
+      <title>Platform update 1.1r0</title>
+      <link>https://www.aimmxi.xyz</link>
+      <description>Ported the entire website to Hugo and fixed some small errata with already existing articles.</description>
+      <pubDate>Sat, 02 Aug 2025 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false">2025-08-02</guid>
+    </item>
+
+    <item>
       <title>Initial release</title>
       <link>https://www.aimmxi.xyz</link>
       <description>Initial release (1.0r0) and initial content update (2025-06-09).</description>
