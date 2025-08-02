@@ -9,5 +9,5 @@ speed1: "100"
 speed2: "75"
 speed3: "125"
 speed4: "30"
-timeout: "750"
+timeout: "0"
 ---

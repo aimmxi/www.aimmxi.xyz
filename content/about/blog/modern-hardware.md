@@ -22,11 +22,11 @@ Take common household appliances as an example, fridges, microwaves, heating sto
 Corporations like to brag about innovation and new designs to sell more by creating a need, so to say. Even though the old appliance you already have might be perfectly fine for your use case, corporations will try to convince end users that a new product is way better because of some niche, barely useful, sometimes convoluted feature that ends up making the product worse.
 
 For instance, absolutely everything nowadays comes with an app. The most merciful manufacturers let you use their product without it, but it is not uncommon to see technology that requires the app to work. This is detrimental to the user because:
- - The application becomes a dependency. If the app stops working or is no longer available to download or install, the product is rendered useless.</li>
- - It is a privacy concern, as most apps require an account and the subsequent personal information that it involves.</li>
- - Usually, the devices receive updates through the app, which can cause downtime or even permanent bricks if something were to go wrong.</li>
- - Some devices have apps for the sake of it. It's much faster to use the actual device's controls.</li>
- - In some cases, there is a subscription involved which, again, can render the device useless if the corporation deems necessary.</li>
+ - The application becomes a dependency. If the app stops working or is no longer available to download or install, the product is rendered useless.
+ - It is a privacy concern, as most apps require an account and the subsequent personal information that it involves.
+ - Usually, the devices receive updates through the app, which can cause downtime or even permanent bricks if something were to go wrong.
+ - Some devices have apps for the sake of it. It's much faster to use the actual device's controls.
+ - In some cases, there is a subscription involved which, again, can render the device useless if the corporation deems necessary.
 
 ### Society is also a problem
 Apps are not the only aspect in which new technology fails to improve it's previous generations. Another case worth mentioning is how trends and society largely affect a product's design and compromise some of its usability.

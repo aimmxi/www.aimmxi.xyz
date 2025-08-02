@@ -34,7 +34,7 @@ As an example, for the WM itself, you can pick i3, BSPWM, DWM, Hyprland and many
 
 This design fits the UNIX philosophy of "do one thing and do it well" and by combining many programs that do their own thing well you can achieve massive improvements in speed and effectiveness, or at least in paper.
 
-As a bit of a tangent, there is also a slew of minimalist software that follows this philosophy and sort of further improves the experience and automation capabilities. [Suckless'](https://suckless.org/)> software is probably the most famous amongst Linux enthusiasts. As a side effect of such minimalism, WMs are outstanding at performance on old or underpowered hardware.
+As a bit of a tangent, there is also a slew of minimalist software that follows this philosophy and sort of further improves the experience and automation capabilities. [Suckless'](https://suckless.org/) software is probably the most famous amongst Linux enthusiasts. As a side effect of such minimalism, WMs are outstanding at performance on old or underpowered hardware.
 
 {{< 2-centered-img-caption 
     "./bspwm-rice.jpg" "BSPWM rice from <a href='https://www.reddit.com/r/unixporn/comments/orhmk7/bspwm_misty_mountains_feat_onedark/'>u/R1ce_Man on Reddit</a>" 

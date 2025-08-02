@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	{{ partial "navbar.html" . }}
+	{{ partial "navbar.html" . -}}
 
 	<main>
 		{{ partial "slide-header.html" . }}
@@ -15,14 +15,13 @@
 
 		<section class="listing-main center">
 			<!-- For all computing projects, ordered by name in descending order and date -->
-			{{ $current := . }}
+			{{- $current := . -}}
 
-			{{ range sort (sort (where .Site.Pages ".Params.Category" $current.Params.Categorygroup) ".Title" "desc") ".Params.Datestr" "desc"}}
+			{{- range sort (sort (where .Site.Pages ".Params.Category" $current.Params.Categorygroup) ".Title" "desc") ".Params.Datestr" "desc" -}}
 				<div class="listing-elem flex">
 					<div class="listing-img-c flex flex-vcenter">
 						<img class="listing-img" src="{{ .RelPermalink }}/thumb.png"/>
 					</div>
-
 					<!-- Main fields -->
 					<div class="listing-txt-c">
 						<h4>{{ .Title }}</h4>
@@ -31,25 +30,14 @@
 							<p class="listing-txt">{{ .Params.Abstract }}</p>
 						</div>
 					</div>
-
 					<!-- Adds the tags -->
 					<div class="tag-view flex flex-vcenter flex-hcenter">
 						{{ range .Params.Tags }}
-  							{{ if eq . "Electronics" }}
-								{{ partial "tags/electronics.html"}}
-  							{{ end }}
-  							{{ if eq . "Handcrafts" }}
-								{{ partial "tags/handcrafts.html"}}
-  							{{ end }}
-  							{{ if eq . "Hardware" }}
-								{{ partial "tags/hardware.html"}}
-  							{{ end }}
-  							{{ if eq . "Modelling" }}
-								{{ partial "tags/modelling.html"}}
-  							{{ end }}
-  							{{ if eq . "Software" }}
-								{{ partial "tags/software.html" . }}
-  							{{ end }}
+  							{{- if eq . "Electronics" -}} {{ partial "tags/electronics.html"}} {{ end -}}
+  							{{- if eq . "Handcrafts" -}} {{ partial "tags/handcrafts.html"}} {{ end -}}
+  							{{- if eq . "Hardware" -}} {{ partial "tags/hardware.html"}} {{ end -}}
+  							{{- if eq . "Modelling" -}} {{ partial "tags/modelling.html"}} {{- end -}}
+  							{{- if eq . "Software" -}} {{ partial "tags/software.html" . }} {{ end -}}
 						{{ end }}
 					</div>
 

@@ -19,7 +19,6 @@
 			{{ $models := where .Site.RegularPages "File.Dir" "eq" "galleries/models/" }}
 			{{ $sorted := sort $models "Params.index" "desc" }}
 
-
     		{{ range $sorted }}
 				<div class="model flex">
 						<img class="model-img" src="/galleries/models/thumbs/{{ .Params.Thumb }}">

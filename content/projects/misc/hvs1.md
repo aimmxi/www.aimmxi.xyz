@@ -132,7 +132,7 @@ Here is the final result with xscreensaver running:
 </div>
 
 ### Links and files
-{{< links/model "Case Model:" "HVS-1" "https://www.thingiverse.com/thing:7015122" >}}
+{{< links/model "Case Model:" "HVS1" "https://www.thingiverse.com/thing:7015122" >}}
 
 
 

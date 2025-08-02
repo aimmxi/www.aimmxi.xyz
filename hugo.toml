@@ -1,7 +1,7 @@
 baseURL = 'https://www.aimmxi.xyz/'
 languageCode = 'en-us'
 title = 'AIMMXI'
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "RSS"]
 
 disableHugoGeneratorInject = true
 disableLiveReload = true
