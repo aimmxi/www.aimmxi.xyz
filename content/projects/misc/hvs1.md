@@ -33,8 +33,8 @@ Aside from making it small, I wanted to make it more than a regular CRT TV set w
 
 ### Bill of Materials
 
-<table class="center f16">
-	<tr class="f20 row-b">
+<table class="center f1-25">
+	<tr class="f1-50 row-b">
 		<th class="bom-header">Item</th>
 		<th class="bom-header">Qty.</th>
 		<th class="bom-header">Price/Unit (EUR)</th>

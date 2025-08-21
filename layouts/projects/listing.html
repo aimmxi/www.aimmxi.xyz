@@ -25,9 +25,9 @@
 					<!-- Main fields -->
 					<div class="listing-txt-c">
 						<h4>{{ .Title }}</h4>
-						<i class="f12">{{ .Params.Datestr }}</i>
+						<i class="f1 block mb-10">{{ .Params.Datestr }}</i>
 						<div class="listing-desc flex flex-vcenter">
-							<p class="listing-txt">{{ .Params.Abstract }}</p>
+							<p class="mb-0">{{ .Params.Abstract }}</p>
 						</div>
 					</div>
 					<!-- Adds the tags -->
@@ -42,7 +42,7 @@
 					</div>
 
 					<div class="listing-view flex flex-vcenter flex-hcenter">
-						<a class="view-link f24" href="{{ .RelPermalink }}">View ></a>
+						<a class="view-link f1-75" href="{{ .RelPermalink }}">View ></a>
 					</div>
 				</div>
 			{{ end }}

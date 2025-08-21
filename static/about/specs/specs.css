@@ -1,18 +1,16 @@
-main{
-	overflow-x: hidden;
-}
+main{overflow-x: hidden;}
 
 .computing-c, .hardw-c{
 	width: var(--bodywidth);
 	position: relative;
-	margin-top: 50px;
+	margin-top: 3.25rem;
 }
 
 .computing-img-top-c, .computing-img-bottom-c, .computing-txt-c, .hardw-txt-c {width: 50%;}
 .computing-img-top-c{flex-wrap: wrap;}
 
 .computing-txt-c, .hardw-txt-c {
-	padding: 30px;
+	padding: 2rem;
 	background-color: black;
 }
 
@@ -20,13 +18,38 @@ main{
 
 .photo-frame1, .photo-frame2{
 	background-color: white;
-	/* height: 40vh; */
 	max-height: 40%;
 	aspect-ratio: 6/7;
-	margin: auto 35px auto 35px;
+	margin: auto 2rem auto 2rem;
 }
 
 .photo-bg{
 	width: 85%;
 	padding-bottom: 15%;
+}
+
+/*----------Responsive Design---------*/
+/*----------Large---------*/
+@media screen and (max-width: 1024px) {
+	.computing-c, .hardw-c{display: block;}
+	.hardw-c{margin-top: 2rem;}
+	.computing-img-top-c{flex-wrap: nowrap;}
+	.computing-img-top-c, .computing-img-bottom-c, .computing-txt-c, .hardw-txt-c{width: auto;}
+}
+
+/*----------Medium---------*/
+@media screen and (max-width: 768px) {
+	:root{	
+		--navbarwidth: 97vw;
+		--bodywidth: 95vw;
+		--titlewidth: 95vw;
+		--footerwidth: 95vw;
+	}
+	html{font-size: 16px;}
+}
+
+/*----------Small---------*/
+@media screen and (max-width: 640px) {
+	html{font-size: 12px;}
+	.content{margin: 20px;}
 }

@@ -5,14 +5,16 @@
 	width: var(--footerwidth);
 	margin: 40px auto 20px auto;
 }
-.signature{margin-left: 10px;}
-.watermark, .version, .support{margin: 20px 0px 20px 5px;}
 
-.icon-c, .rss-c{
-	background-color: var(--cyan);
-	padding: 0 5px 0 5px;
+.signature, .watermark, .versions{margin-left: 10px;}
+.watermark{margin-bottom: 0px;}
+.icon-c, .rss-c{background-color: var(--cyan);}
+
+.icon-c{
+	margin-left: auto; 
+	margin-right: 5px;
+	padding: 5px;
 }
 
-.icon-c{margin-left: auto; margin-right: 5px;}
-.icon{width: 48px;}
-.coin{width: 32px;}
+.icon{width: 3rem;}
+.signature, .coin{width: 2rem;}

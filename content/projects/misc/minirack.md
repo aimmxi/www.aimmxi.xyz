@@ -34,8 +34,8 @@ The interior is a bit wider than 254mm (10 inches) to allow for some play and ac
 ### Bill of Materials
 Al usual, the BoM only takes into consideration the materials and not the tools. If a component has to be bought in bulk, that bulk's price is noted:
 			
-<table class="center f16">
-	<tr class="f20 row-b">
+<table class="center f1-25">
+	<tr class="f1-50 row-b">
 		<th class="bom-header">Item</th>
 		<th class="bom-header">Qty.</th>
 		<th class="bom-header">Price/Unit (EUR)</th>

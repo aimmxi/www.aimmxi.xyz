@@ -1,5 +1,5 @@
+/*----------Style---------*/
 /*----------Global---------*/
-
 :root{
 	/* Colours */
 	--transpblack: #000000C0;
@@ -19,7 +19,6 @@
 	--titlewidth: 65vw;
 	--bodywidth: 85vw;
 	--footerwidth: 65vw;
-	
 
 	/* Curves */
 	--curve-quart: cubic-bezier(0.76, 0, 0.24, 1);
@@ -27,43 +26,41 @@
 	--curve-overshoot: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-*{font-family: ddin;}
+*{
+	font-family: ddin;
+	box-sizing: border-box;		/* Takes the border and padding into consideration when computing size */
+}
+
+html{font-size: 18px;}			/* 1rem = 18px */
+main{padding: 0px;}
 
 body{
-/* 	background-image: linear-gradient(#14272a, #1a846a); */
 	background-image: linear-gradient(var(--bg1), var(--bg2));
 	background-repeat: no-repeat;
 	background-size: contain;
 	margin: 0px;
 	padding: 0px;
-	min-height: 99vh;
+	min-height: 100vh;
 }
 
-main{padding: 0px;}
 
-/* Headers */
+/*----------Headers---------*/
 h1, h2, h3, h4, h5{
 	color: var(--cyan);
 	margin: 0px;
 }
 
-h1{font-size: 64pt;} 	/* Large titles */
-h2{font-size: 48pt;	text-decoration-line: underline; text-decoration-color: var(--cyan);}	/* Abstracts */
-h3{font-size: 36pt;}	/* Article sections */
-h4{font-size: 24pt;} 	/* Smaller stuff */
-h5{font-size: 32pt; font-family: Bytesized; color: white;} 	/* Reserved for captions*/
+h1{font-size: 3.5rem;} 																		/* Large titles */
+h2{font-size: 3rem;	text-decoration-line: underline; text-decoration-color: var(--cyan);}	/* Abstracts */
+h3{font-size: 2rem;}																		/* Article sections */
+h4{font-size: 1.5rem;} 																		/* Smaller stuff */
+h5{font-size: 2rem; font-family: Bytesized; color: white;}								   /* Reserved for captions*/
 
-hr{
-	color: #149b88;
-	margin: 10px auto 10px auto;
-	width: 90%;
-	border-width: 2px 0px 0px 0px;
-	border-style: dotted;
-}
 
-p, i, figcaption, li, code, em{
+/*----------Text and Images---------*/
+p, i, em, figcaption, li, code{
 	margin: 0px;
-	font-size: 16pt;
+	font-size: 1rem;
 	margin-bottom: 20px;
 	text-align: justify;
 	color: white;
@@ -71,37 +68,17 @@ p, i, figcaption, li, code, em{
 }
 
 figcaption{
-	font-size: 12pt;
+	font-size: 0.75rem;
 	padding-top: 10px;
 	text-align: center;
 }
 
-code{font-family: RobotoCondensed;}
 i, em{color: var(--cyan);}
-li{margin-bottom: auto;}
+code{font-family: RobotoCondensed;}
 img{margin: auto 5px auto 5px;}
 
 
-
-/* Tables */
-table{
-	color: white;
-	border-spacing: 0px;
-}
-
-td{padding: 10px;}
-
-.row-a{background-color: black;}
-.row-b{background-color: var(--grey);}
-
-
-
-/* Lists */
-ul{list-style-type: square;}
-
-
-
-/* Link styling */
+/*----------Links---------*/
 a:link{
 	color: var(--cyan2);
 	border-color: #000000;
@@ -124,11 +101,29 @@ a:active{color: blue;}
 	background-color: transparent;
 	color: transparent;
 }
-.notvisited:visited{color: var(--cyan2);}
+
+.notvisited:visited{color: var(--cyan2);}	/* For links that should not be highlighted when visited */
 
 
+/*----------Tables---------*/
+table{
+	color: white;
+	border-spacing: 0px;
+}
 
-/* Fonts */
+td{padding: 10px;}
+th{font-size: 1.05rem;}
+
+.row-a{background-color: black;}
+.row-b{background-color: var(--grey);}
+
+
+/*----------Lists---------*/
+ul{list-style-type: square;}
+li{margin-bottom: auto;}
+
+
+/*----------Fonts---------*/
 @font-face{font-family: Bytesized; src: url("/assets/font/Bytesized.ttf");}
 @font-face{font-family: Gidole; src: url("/assets/font/Gidole.ttf");}
 @font-face{font-family: Mussels; src: url("/assets/font/Mussels.otf");}
@@ -147,17 +142,16 @@ a:active{color: blue;}
 .font-DDIN{font-family: DDIN;}
 .font-DDINBold{font-family: DDINBold;}
 
-.f9{font-size: 9pt;}
-.f12{font-size: 12pt;}
-.f14{font-size: 14pt;}
-.f16{font-size: 16pt;}
-.f20{font-size: 20pt;}
-.f24{font-size: 24pt;}
-.f36{font-size: 36pt;}
+.f0-5{font-size: 0.5rem;}
+.f0-75{font-size: 0.75rem;}
+.f1{font-size: 1rem;}
+.f1-25{font-size: 1.25rem;}
+.f1-50{font-size: 1.5rem;}
+.f1-75{font-size: 1.75rem;}
+.f2{font-size: 2rem;}
 
 
-
-/* Images */
+/*----------Images---------*/
 .img25, .img30, .img40, .img50, .img60, .img70, .img75, .img80, .img90, .img100{padding-bottom:30px;}
 .img25{width: 25%;}
 .img30{width: 30%;}
@@ -171,50 +165,71 @@ a:active{color: blue;}
 .img100{width: 100%;}
 
 
-/* Macros */
+/*----------Macros---------*/
 .center{margin: auto;}
-.center-txt{text-align: center;}
-.right-txt{text-align: right;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.whitespace-nowrap{white-space: nowrap;}
 
+.mb-0{margin-bottom: 0px;}
+.mb-5{margin-bottom: 5px;}
 .mb-10{margin-bottom: 10px;}
 .mb-20{margin-bottom: 20px;}
 .mb-30{margin-bottom: 30px;}
+.ml-0{margin-left: 0px;}
+.ml-5{margin-left: 5px;}
+.ml-10{margin-left: 10px;}
 
-.nomargin{margin: 0px;}
-.noanim{animation: none;}
-
-.block {display: block;}
-.flex {display: flex;}
+.block{display: block;}
+.flex{display: flex;}
 .flex-hcenter{justify-content: center;}
 .flex-vcenter{align-items: center;}
-.hidden{visibility: hidden};
+.hidden{visibility: hidden;}
 
-.pl10{padding-left: 10px;}
-
-.txt-black{color: black; text-decoration-color: black;}
-.txt-white{color: white;}
-.txt-cyan{color: var(--cyan);}
+.text-black{color: black; text-decoration-color: black;}
+.text-white{color: white;}
+.text-cyan{color: var(--cyan);}
 
 
+/*----------Tags---------*/
+.tag-c{
+	border: 3px solid var(--cyan);
+	width: 100%;
+	margin: 0.15rem;
+}
 
-/* Common parts of different webpages */
+.tag-img{
+	background-color: var(--cyan);
+	margin: 0px;
+	width: 2.5rem;
+}
+
+.tag-txt{
+	background-color: var(--grey);
+	color: white;
+	margin: 0px 2px 0px 2px;
+	font-family: VGA;
+	text-shadow: black 2px 2px;
+	letter-spacing: -1px;
+	padding: 0.2rem;
+	width: 100%;
+}
+
+
+/*----------Common components---------*/
 .title{width: var(--titlewidth);}
 
 .title-c, .title-c-noanim{
-	height: 15vh;
-	min-height: 150px;
 	margin-top: 20px;
 	padding: 20px;
 	background-color: white;
 	background-color: #FFFFFF40;
 	border-left: 3px solid var(--cyan);
 	backdrop-filter: blur(10px);
-	overflow: hidden;
-	white-space: nowrap;
 }
 
-.title-c{animation: expand-title 0.75s var(--curve-expo) forwards;}
-.title-c-noanim{width: var(--titlewidth)}
+.title-c{animation: expand-title 0.75s var(--curve-expo) forwards, title-overflow 3s forwards;}
+.title-c-noanim{width: var(--titlewidth);}
 .typed-caption{color: white;}
 
 .title-back{
@@ -232,71 +247,47 @@ a:active{color: blue;}
 	background-repeat: no-repeat;
 }
 
-
-
-/* Tags */
-.tag-view{
-	margin: 0px 10px 0px auto;
-	height: auto;
-	width: 10%;
-    flex-direction: column;
-	min-width: 170px;
+.content-c{
+	width: var(--bodywidth);
+	background-color: black;
+	margin: auto;
+	overflow: hidden;			/* Required to avoid top/bottom margin collapsing*/
 }
 
-.tag-c{
-	border: 3px solid var(--cyan);
-	width: 100%;
-	margin: 2px;
+.content{margin: 40px;}
+
+.abstract{
+	width: var(--bodywidth);
+	position: relative;
+	margin-top: 3rem;
+	background-color: black;
 }
 
-.tag-img{
-	background-color: var(--cyan);
+.abstract-txt{margin: 2rem;}
+
+.endsig{
+	width: 2.5rem;
 	margin: 0px;
 }
 
-.tag-txt{
-	background-color: var(--grey);
-	color: white;
-	margin: 0px 2px 0px 2px;
-	font-family: VGA;
-	text-shadow: black 2px 2px;
-	letter-spacing: -1px;
-	width: 100%;
+/*----------Responsive Design---------*/
+/*----------Large---------*/
+@media screen and (max-width: 1024px) {
 }
 
-
-
-/* Common animations */
-@keyframes expand-title{
-	from {width: 0;}
-	to {width: var(--titlewidth);}
-}
-
-
-.throw-photo-left{animation: throw-photo-left 1s var(--curve-quart) forwards;}
-@keyframes throw-photo-left {
-	from {transform: translateX(100vw) rotate(10deg);}
-	to {transform: translateX(0) rotate(-10deg);}
-}
-
-.throw-photo-right{animation: throw-photo-right 1s var(--curve-quart) forwards;}
-@keyframes throw-photo-right {
-	from {transform: translateX(-100vw) rotate(0deg);}
-	to {transform: translateX(0) rotate(10deg);}
-}
-
-
-
-
-/* Responsiveness */
-@media screen and (max-width: 950px) {
-	:root{--navbarwidth: 95vw;}
-}
-
-@media screen and (max-width: 750px) {
+/*----------Medium---------*/
+@media screen and (max-width: 768px) {
 	:root{	
+		--navbarwidth: 97vw;
 		--bodywidth: 95vw;
 		--titlewidth: 95vw;
 		--footerwidth: 95vw;
 	}
+	html{font-size: 16px;}
+}
+
+/*----------Small---------*/
+@media screen and (max-width: 640px) {
+	html{font-size: 12px;}
+	.content{margin: 20px;}
 }

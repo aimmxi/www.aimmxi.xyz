@@ -10,17 +10,17 @@
     {{ partial "navbar.html" . }}
 
 	<main>
-		<section class="title-c-noanim center flex-vcenter flex">
-			<h1 class="f36">> {{ .Title }} </h1>
+		<section class="blog-title-c flex flex-vcenter">
+			<h1 class="f2">> {{ .Title }} </h1>
 			<div class="details">
-				<h3 class="date"> {{ .Date | dateFormat "2006-01-02" }}</h3>
-				<p>By AIMMXI</p>
+				<p class="mb-0 whitespace-nowrap">{{ .Date | dateFormat "2006-01-02" }}</p>
+				<p class="mb-0 whitespace-nowrap">By AIMMXI</p>
 			</div>
 		</section>
 
-		<section class="blog-c flex center">
-			<div class="blog-c-txt">
-                {{ .Content }}
+		<section class="content-c">
+			<div class="content">
+            	{{ .Content }}
 			</div>
 		</section>
 	</main>

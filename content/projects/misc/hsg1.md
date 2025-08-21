@@ -45,8 +45,8 @@ The board will have a power on switch that will feed 5V to the Arduino from a 3.
 ### Bill of Materials
 The following bill of materials corresponds to all the components that are required to build this project from scratch. It excludes tools and assumes that no materials are readily available and everything has to be bought. If a certain component is not available as a single unit and has to be bought in a pack, the price of the whole pack is used.
 
-<table class="center f16 mb-20">
-	<tr class="f20 row-b">
+<table class="center f1-25 mb-20">
+	<tr class="f1-50 row-b">
 		<th class="bom-header">Item</th>
 		<th class="bom-header">Qty.</th>
 		<th class="bom-header">Price/Unit (EUR)</th>

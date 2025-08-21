@@ -17,8 +17,8 @@
 				<img src="/assets/img/icons/arrows-back.svg">
 				<div class="showcase-txt-c">
 					<div class="showcase-txt flex">
-						<h1 class="f36">{{ .Params.Title }}</h1>
-						<i class="f20">{{ .Params.Datestr }}</i>
+						<h1 class="f2">{{ .Params.Title }}</h1>
+						<i class="f1-50">{{ .Params.Datestr }}</i>
 						<p class="showcase-desc">{{ .Params.Abstract}}</p>
 						<div class="showcase-tags flex">
 							{{ range .Params.Tags }}
@@ -30,7 +30,7 @@
 							{{ end }}
 						</div>
 						<div class="toc">
-							<h4 class="f20">Index</h4>
+							<h4 class="f1-50">Index</h4>
 							{{ .TableOfContents }}
 						</div>
 					</div>
@@ -39,8 +39,10 @@
 		</section>
 		
 		<section class="content-c">
-			<h1>{{ .Params.Title }}</h1>
-            {{ .Content }}
+			<div class="content">
+				<h1>{{ .Params.Title }}</h1>
+            	{{ .Content }}
+			</div>
 		</section>
 </main>
 
