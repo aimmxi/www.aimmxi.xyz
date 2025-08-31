@@ -33,9 +33,9 @@ Apps are not the only aspect in which new technology fails to improve it's previ
 
 A clear example are ports in laptops / phones. Previously, manufacturers took care in providing heaps of ports so that the user could connect as many peripherals as needed. Right now, phones do not have headphone jacks and laptops that require dongles and docks are the norm.
 
-{{< 2-centered-img-caption 
-    "./t61.jpg" "Thinkpad T61 from <a href='https://www.notebookcheck.net/Review-IBM-Lenovo-Thinkpad-T61-Notebook.3972.0.html'>NotebookCheck.net</a>" 
-    "./p5570.jpg" "Dell Precision 5570 from <a href='https://www.dell.com/en-us/shop/dell-laptops/precision-5570-workstation/spd/precision-15-5570-laptop'>Dell.com</a>">}}
+{{< img-container 
+    img1="./t61.jpg" cap1="Thinkpad T61 from <a href='https://www.notebookcheck.net/Review-IBM-Lenovo-Thinkpad-T61-Notebook.3972.0.html'>NotebookCheck.net</a>" 
+    img2="./p5570.jpg" cap2="Dell Precision 5570 from <a href='https://www.dell.com/en-us/shop/dell-laptops/precision-5570-workstation/spd/precision-15-5570-laptop'>Dell.com</a>">}}
 
 There are plenty of other society and trend related gimmicks that are getting huge investments lately. I would say the most prominent ones are greenwashing and AI.
 
@@ -61,7 +61,7 @@ Just to prove this point, here's a list of products that have failed me in the p
  - The 2.0 TDI BKD engine in my Audi had to be replaced after it failed. The BKD model is known to fail extremely frequently. 
 
 
-{{< centered-img-caption "./omron.jpg" "Failed Omron D2FC-F-7N(10M) switch.">}}
+{{< img-container img1="./omron.jpg" cap1="Failed Omron D2FC-F-7N(10M) switch." atr1="img50">}}
 
 All of those failed due to bad engineering, planed obsolescence or cheap manufacturing, none failed because of extensive use.
 

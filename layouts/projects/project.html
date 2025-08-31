@@ -9,12 +9,10 @@
 	{{ partial "navbar.html" . -}}
 	<main>
 		<section class="showcase-c flex">
-			<div class="showcase-img-c">
-				{{ if eq .Params.Showcase "image" -}} <img class="showcase-img" src="./showcase.jpg"> {{ end }}
-				{{ if eq .Params.Showcase "video" -}} <video src="./showcase.webm" controls muted loop></video> {{ end }}
-			</div>
+			{{ if eq .Params.Showcase "image" -}} <img class="showcase-img" src="./showcase.jpg"> {{ end }}
+			{{ if eq .Params.Showcase "video" -}} <video class="showcase-vid" src="./showcase.webm" controls muted loop></video> {{ end }}
 			<div class="showcase-hoverable flex flex-vcenter">
-				<img src="/assets/img/icons/arrows-back.svg">
+				<img class="showcase-arrow" src="/assets/img/icons/arrows-back.svg">
 				<div class="showcase-txt-c">
 					<div class="showcase-txt flex">
 						<h1 class="f2">{{ .Params.Title }}</h1>

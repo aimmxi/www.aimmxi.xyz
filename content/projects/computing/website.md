@@ -21,7 +21,7 @@ This website, as simple as it may look, has gone through many iterations through
 
 The concept of websites has always been very appealing to me and when I learnt about HTML and CSS I started to think how a website for my own ideas would look like. At first I had very novel ideas on how to build a website, despite having visited a fair amount of them with varying styles. I made an arcaic looking one for an assignment (Circa early 2019) that looked like this:
 
-{{< centered-img "./w1.png" "img75" >}}
+{{< img-container img1="./w1.png" atr1="img75" >}}
 			
 At this point I had no design principles, ideas or objectives set for what the website should look like or even serve, so it was a mess. I was ok with the way it looked at the time, but it was for a simple web programming/managing course and I had no purpose for it, so it sat in the back of my mind (And hard drive) for a bunch more years.
 
@@ -38,8 +38,8 @@ I set out to develop a custom website from scratch, like I did years ago. Only t
 
 This second iteration of a website followed a more serious approach. Some care went into making sure that it looked consistent and some rules were defined beforehand. The initial design was discarded and everything was remade from scratch. This is how that more serious iteration looked (Note the similar color theme and retro style all throughout the pages):
 
-{{< centered-img "./w2a.png" "img75" >}}
-{{< centered-img "./w2b.png" "img75" >}}
+{{< img-container img1="./w2a.png" atr1="img75" >}}
+{{< img-container img1="./w2b.png" atr1="img75" >}}
 
 I am all on minimalism so I went the pure HTML+CSS route with it, no client side JS code or server side shenanighans. It proved to be a bad choice in the long run because not everything a functional website should offer can be done with static files (At least not in a practical way).
 

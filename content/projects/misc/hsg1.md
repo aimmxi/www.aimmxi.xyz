@@ -33,12 +33,12 @@ First and foremost, I created a breadboard prototype with an Arduino Uno R3 and 
 The distribution of components on the board would dictate how the case would look, so I experimented with a few different layouts. I would have loved a vertical layout but the largest perfboard I was able to source was 120x80mm and it was not possible to fit both displays, the Nano, and position the buttons so that they could be used comfortably.
 
 I settled on the following horizontal layout:
-{{< centered-img "layout.jpg" "img50">}}
+{{< img-container img1="layout.jpg" atr1="img50">}}
 
 Notice the potentiometers, they were supposed to control the LCD's brightness and the volume, but I was running out of space on the board and I decided to scrap the idea. Instead, a fixed resistor that yielded a reasonable brightness is used and the volume is hardcoded in the firmware.
 
 This is how the schematic looks with the two potentiometers in place:
-{{< centered-img "schematic.png" "img50">}}
+{{< img-container img1="schematic.png" atr1="img50">}}
 
 The board will have a power on switch that will feed 5V to the Arduino from a 3.7V 18650 Lithium battery. A T6845-C board will allow to charge the 3.7V battery with 5V from a micro USB port as well as boosting the battery voltage to 5V to power the Arduino Nano.
 
@@ -153,22 +153,20 @@ The model has 4 tabs on the sides to mount the PCB and a cylinder shaped protrus
 
 I did not get the supports completely correct (A common trend among my 3D prints) and had some overhang at the top of the case. I dremeled it down as well as some Z-Wobble on the backside.
 
-{{< 2-centered-img-caption 
-	"case1.jpg" "" 
-	"case2.jpg" "" >}}
+{{< img-container 
+	img1="case1.jpg" 
+	img2="case2.jpg" >}}
 
 #### Wiring
 As part of a design choice, I wanted to keep the wires and main components exposed. To make the project more aesthetically pleasing, I opted to route the cables using 90 degree bends (Inspired by [albin.jd's](https://www.instagram.com/albin.jd/) work). This is possible because the wires are solid core and can be easily straightened and bent with a pair of needlenose pliers.
 
 Most wirework is carried out at the top of the board, yet some had to go at the back, mostly simple jumpers to run power or ground to some hard to reach pins. I was able to run some cables below the LCD screen, making the back side less cramped.
 
-{{< centered-img "front_wiring.jpg" "img50">}}
+{{< img-container img1="front_wiring.jpg" atr1="img50">}}
 
 Initially, I thought about fitting the power button on the case itself but it did not look natural, as the shape of the switch poked both through the front and back of the case, the wires were visible, etc. I managed to drill a hole in the PCB large enough to fit the topmost part of the switch and the nut to hold it in place.
 
-{{< 2-centered-img-caption 
-	"sw1.jpg" "" 
-	"sw2.jpg" "" >}}
+{{< img-container img1="sw1.jpg" img2="sw2.jpg" >}}
 
 I removed the female USB-A connector on the T6845-C board to make it slimmer, soldered wires to it and drilled a hole on the left side of the case to mount the micro USB port for charging.
 
@@ -177,18 +175,16 @@ I soldered the Arduino Nano headers, the switches, the passive components and al
 ### Final touches
 The clearance between the up/right switches and the Nano's mini USB interface is just enough to plug a regular mini USB cable for programming. Once the device was programmed and some minor software bugs were fixed, the battery and charging board were hot glued to the case and the board was mounted with 3 screws. The 4th one was not reachable because of the position of LCD; it covered the top right hole, so the tab that was meant to thread a screw only serves as support to avoid the board being bent.
 
-{{< centered-img "full_back.jpg" "img50">}}
+{{< img-container img1="full_back.jpg" atr1="img50">}}
 
 My sister was eager to help me with the final touches and drew a few sketches of Reinier. I printed a label with the information about the device and sticked it to the back:
 
-{{< centered-img "label.png" "img50">}}
+{{< img-container img1="label.png" atr1="img50">}}
 
 ### Results
 With all the parts put together and screwed to the case, the final result looks as follows:
 
-{{< 2-centered-img-caption 
-	"final1.jpg" "" 
-	"final2.jpg" "" >}}
+{{< img-container img1="final1.jpg"	img2="final2.jpg" >}}
 
 <div class="flex flex-hcenter">
 	<video src="demo.webm" controls></video>
