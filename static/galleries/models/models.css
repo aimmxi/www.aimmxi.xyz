@@ -1,4 +1,4 @@
-/* .title-back{background-image: url("/assets/img/animated-bgs/photo.gif");} */
+/*----------Models---------*/
 .model{
 	border: 3px solid var(--cyan);
 	margin: 0.5rem;
@@ -29,11 +29,6 @@
 }
 
 .model-footer-links-c{padding: 0px 0.5rem 0px 0.5rem;}
-
 .download-link{margin-right: 10px;}
 .download-link:hover{margin-right: 8px;}		/*Workaround to compensate for border sizes*/
 .download-link:link{color: black;}
-
-/*----------Small---------*/
-@media screen and (max-width: 640px) {
-}

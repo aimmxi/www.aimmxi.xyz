@@ -1,3 +1,4 @@
+/*----------Errors---------*/
 body{
 	background-image: url("/assets/img/bgs/bg.gif");
 	background-color: #071511;
@@ -14,6 +15,7 @@ main{
     flex-direction: column;
     display: flex;
 }
+
 .main-box{
     width: fit-content;
 }
@@ -24,9 +26,7 @@ main{
     margin: 20px;
 }
 
-.error-desc{
-    padding-top: 20px;
-}
+.error-desc{padding-top: 20px;}
 
 .bg-noise{
     background: url("/assets/img/bgs/noise.png");

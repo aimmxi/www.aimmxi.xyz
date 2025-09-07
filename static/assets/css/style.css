@@ -226,18 +226,15 @@ li{margin-bottom: auto;}
 /*----------Common components---------*/
 .title{width: var(--titlewidth);}
 
-.title-c, .title-c-noanim{
-	margin-top: 20px;
-	padding: 20px;
+.title-c{
+	margin-top: 1rem;
+	padding: 1rem;
 	background-color: white;
 	background-color: #FFFFFF40;
 	border-left: 3px solid var(--cyan);
 	backdrop-filter: blur(10px);
+	animation: expand-title 0.75s var(--curve-expo) forwards, title-overflow 3s forwards;
 }
-
-.title-c{animation: expand-title 0.75s var(--curve-expo) forwards, title-overflow 3s forwards;}
-.title-c-noanim{width: var(--titlewidth);}
-.typed-caption{color: white;}
 
 .title-back{
 	position:absolute;
@@ -246,7 +243,7 @@ li{margin-bottom: auto;}
 	z-index: -1;
 	width: var(--titlewidth);
 	height: 100%;
-	padding: 20px;				/* This has to be the same as title-c*/
+	padding: 1rem;				/* This has to be the same as title-c*/
 	filter: blur(3px);
 	opacity: 0.2;
 	background-size: cover;
@@ -271,17 +268,10 @@ li{margin-bottom: auto;}
 }
 
 .abstract-txt{margin: 2rem;}
+.endsig{width: 2.5rem;}
 
-.endsig{
-	width: 2.5rem;
-	margin: 0px;
-}
 
 /*----------Responsive Design---------*/
-/*----------Large---------*/
-@media screen and (max-width: 1024px) {
-}
-
 /*----------Medium---------*/
 @media screen and (max-width: 768px) {
 	:root{	

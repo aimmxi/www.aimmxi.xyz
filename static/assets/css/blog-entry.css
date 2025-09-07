@@ -15,13 +15,3 @@
 	border-left: 3px dotted var(--cyan);
 	height: 100%;
 }
-
-
-@media (min-width: 640px) { 
-	
-}
-
-
-
-
-@media (min-width: 1024px) { /* lg */ }

@@ -1,6 +1,8 @@
+/*----------Bio---------*/
 main{overflow-x: hidden; position: relative;}
 
-/* Topmost div */
+
+/*----------Topmost Div---------*/
 .showcase, .desc-c, .insights-c, .abtpage-c{
 	width: var(--bodywidth);
 	position: relative;
@@ -53,6 +55,7 @@ main{overflow-x: hidden; position: relative;}
 }
 
 .shaded{text-shadow: 5px 5px 0px black;}
+
 
 /*----------Description---------*/
 .desc-c{

@@ -1,5 +1,4 @@
-
-
+/*----------Blog---------*/
 .other-links{
 	margin-top: 10px;
 	width: 50%;
@@ -12,19 +11,19 @@
 	width: 65%;
 }
 
-.blog-table{
-	width: 100%;
-}
+.blog-table{width: 100%;}
 
 .blog-table-header{
 	border-bottom: 3px solid var(--cyan);
 	padding: 5px;
 }
+
 .date{width: 20%; min-width: 115px;}
 .type{width: 20%;}
 
 
-/* Responsiveness */
-@media screen and (max-width: 1100px) {
+/*----------Responsive Design---------*/
+/*----------Large---------*/
+@media screen and (max-width: 1024px) {
 	.blog-main{width: var(--bodywidth);}
 }

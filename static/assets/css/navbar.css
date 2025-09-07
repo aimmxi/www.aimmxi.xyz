@@ -2,7 +2,8 @@
 	--max-navbar-dropdown-height: 130px;
 }
 
-/*Navbar*/
+
+/*----------Navbar---------*/
 .navbar{
 	width: var(--navbarwidth);
 	position: sticky;
@@ -61,12 +62,4 @@
 /*----------Large---------*/
 @media screen and (max-width: 1024px) {
 	.navbar-void{width: 0%;}
-}
-
-/*----------Medium---------*/
-@media screen and (max-width: 768px) {
-}
-
-/*----------Small---------*/
-@media screen and (max-width: 640px) {
 }
