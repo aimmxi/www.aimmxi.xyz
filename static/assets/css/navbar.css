@@ -1,5 +1,5 @@
 :root{
-	--max-navbar-dropdown-height: 170px;
+	--max-navbar-dropdown-height: 130px;
 }
 
 /*Navbar*/
@@ -33,15 +33,13 @@
 	background-color: white;
 	position: absolute;
 	z-index: 10;
-	width: 100%;
-	padding: 10px;
-	border: 3px solid var(--cyan);
-	/* 	Transition */
-	opacity: 0;
 	overflow: hidden;
-	max-height: 0px;
-	transition: max-height 0.25s var(--curve-expo);
+	width: 100%;
 	min-width: 3rem;
+	border: 3px solid var(--cyan);
+	opacity: 0;
+	max-height: 0;
+	transition: max-height 0.15s linear;
 	overflow: hidden;
 }
 
