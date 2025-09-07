@@ -20,6 +20,7 @@
 	height: 100%;
 	border-right: 3px solid var(--cyan);
 	object-fit: cover;
+	margin: 0;
 }
 
 .listing-txt-c{
@@ -47,7 +48,7 @@
 /*----------Responsive Design---------*/
 /*----------Large---------*/
 @media screen and (max-width: 1024px) {
-	.listing-main {
+	.listing-main{
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;

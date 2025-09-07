@@ -140,18 +140,17 @@ main{overflow-x: hidden; position: relative;}
 		top: 0;
 		transform: none;
 		height: 90vw;
-		margin: auto auto 4rem auto;
+		margin: 1rem auto 4rem auto;
 	}
 
 	.intro-txt-c{
 		height: auto;
 		width: var(--bodywidth);
-		margin-left: 0;
 		color: white;
 		border-left: none;
 		text-align: center;
-		padding-bottom: 2rem;
-		margin-bottom: auto;
+		margin: auto 0 auto 0;
+		padding: 0 0 2rem 0;
 	}
 
 	.header{height: 9rem;}

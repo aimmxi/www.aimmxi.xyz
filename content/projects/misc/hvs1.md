@@ -16,8 +16,8 @@ There is something about vintage tech that fascinates people, including myself. 
 It was a different era and it is quite hard to put the finger exactly on what is so captivating about it. However, one of the most appealing characteristics of old tech is for sure it's aesthetic. Despite everything being minimalistic, square, beige or otherwise boring, it stands out and has character without being flashy.
 
 {{< img-container 
-	img1="amiga.jpg" cap1="<a href='https://www.theoldcomputer.com/roms/index.php?folder=Commodore/Amiga/ROMs/Kickstart'>Commodore Amiga</a>"
-	img2="ferguson.jpg" cap2="<a href='https://www.reddit.com/r/crtgaming/comments/10tprn6/1980s_smart_tv/'>Ferguson TX Movie Star</a>" >}}
+	img1="amiga.jpg" cap1="<a href='https://www.theoldcomputer.com/roms/index.php?folder=Commodore/Amiga/ROMs/Kickstart'>Commodore Amiga</a>" atr1="img75 img-responsive"
+	img2="ferguson.jpg" cap2="<a href='https://www.reddit.com/r/crtgaming/comments/10tprn6/1980s_smart_tv/'>Ferguson TX Movie Star</a>" atr2="img75 img-responsive" >}}
 
 A particularly quirky design is that of Cathode Ray Tube displays, also known as CRTs. These types of displays were pretty much the rule and state of the art up until the year 2000 and, for many, are an icon of the retro theme.
 
@@ -26,7 +26,7 @@ I have always wanted to own a CRT TV but never had the space to keep it, so why 
 ### Brainstorming
 I did not plan to make a CRT design from scratch, I wanted something that already looked good and just needed to be modeled and adapted. There are plenty of different CRT models and designs, but I ended up choosing the Hitachi CT series, more precisely the CT 1342 or 1302. They all looked particularly cool and woodgrain is something that I wanted to achieve on the replica as well.
 
-{{< img-container img1="ct1302.jpg" cap1="<a href='https://www.intervideo.co/hitachi-ct1302-13-crt-television/'>Hitachi CT 1302</a>" >}}
+{{< img-container img1="ct1302.jpg" cap1="<a href='https://www.intervideo.co/hitachi-ct1302-13-crt-television/'>Hitachi CT 1302</a>" atr1="img50 img-responsive" >}}
 
 Aside from making it small, I wanted to make it more than a regular CRT TV set with just analog inputs. I thought about fitting a small computer inside that could play back video on the go or run some lightweight graphical applications (Mainly xscreensaver), so I chose the Raspberry Pi Zero 2W, which is a really simple SBC that can run Raspberry Pi OS and is meant for embedded devices and IoT applications.
 
@@ -96,17 +96,17 @@ First, I got the headers soldered to the Raspberry Pi and fitted the 3.5 inch sc
 
 Once the measures were taken, I set out to model a replica on Blender. The final result is composed of 3 parts, a front face, a back plate and a bottom that would have to be glued and that would serve as extra support.
 
-{{< img-container img1="render.jpg">}}
+{{< img-container img1="render.jpg" atr1="img50 img-responsive" >}}
 
 All the parts were glued and dremeled as needed. Everything was put together once to test how the final model would look and once all adjustments had been made, I moved on to the next part.
 
-{{< img-container img1="fit.jpg">}}
+{{< img-container img1="fit.jpg" atr1="img40 img-responsive" >}}
 
 
 #### Painting
 To make it look more like the real thing, some color was needed. I used acrylic to paint the outer surface of the TV, trying to mimic woodgrain and plastic colors as well as possible. To avoid accidentally mixing colors i used masking tape to cover parts that I did not want painted.
 
-{{< img-container img1="masking.jpg">}}
+{{< img-container img1="masking.jpg" atr1="img40 img-responsive" >}}
 
 The acrylic paint was applied directly to the plastic surface of the model, which turns out to be quite bad in terms of adherence. Since then, I have painted some other prints with acrylic and using some primer for plastics promotes better adherence and, overall, yields a better finish than painting raw plastic.
 
@@ -115,7 +115,7 @@ I set up the Raspberry Pi with Raspberry Pi OS and configured the kernel to use 
 
 Once the Raspberry Pi and screen were working, I moved on to the power supply section and charging circuits. The Raspberry Pi takes 5V from an micro USB port to power both itself and the screen. I took advantage of the T6845-C to provide both 5V to the Raspberry and charge a 18650 3.7V battery that would power the TV when no charger was available. I also used a barrel jack to serve as a 5V in to charge the display. In retrospect I should have used the micro USB input provided with the T6845-C, but the barrel jack is what I went with. I made an micro USB cable to connect the T6845-C board to the Raspberry Pi.
 
-{{< img-container img1="wiring.jpg">}}
+{{< img-container img1="wiring.jpg" atr1="img40 img-responsive" >}}
 
 With everything hooked together, I added a power switch and a potentiometer for future use (Perhaps for a potential speaker). After verifying everything worked fine and that the battery was charging, I fitted everything inside of the case and screwed it all together.
 
@@ -123,12 +123,11 @@ With everything hooked together, I added a power switch and a potentiometer for 
 Here is the final result with xscreensaver running:
 
 {{< img-container 
-	img=1"final1.jpg"
-	img2="final2.jpg" >}}
+	img1="final1.jpg" atr1="img75 img-responsive"
+	img2="final2.jpg" atr2="img75 img-responsive" >}}
 
-<div class="flex flex-hcenter">
-	<video src="demo.webm" controls></video>
-</div>
+
+{{< video-container video="demo.webm" atr="img75 img-responsive" >}}
 
 ### Links and files
 {{< links/model "Case Model:" "HVS1" "https://www.thingiverse.com/thing:7015122" >}}
