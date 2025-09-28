@@ -1,3 +1,7 @@
+Platform update 1.2r0 (2025-09-28):
+    - Added full responsive design support
+    - Reworked some UI components like the navbar and the project showcase boxes
+
 Platform update 1.1r0 (2025-08-02):
     - Ported the entire website to Hugo
     - Fixed some small errata with already existing articles

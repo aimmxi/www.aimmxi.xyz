@@ -7,6 +7,14 @@
     <language>en-us</language>
 
     <item>
+      <title>Platform update 1.2r0</title>
+      <link>https://www.aimmxi.xyz</link>
+      <description>Added full responsive design support and reworked some UI components.</description>
+      <pubDate>Sun, 28 Sep 2025 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false">2025-09-28</guid>
+    </item>
+
+    <item>
       <title>Platform update 1.1r0</title>
       <link>https://www.aimmxi.xyz</link>
       <description>Ported the entire website to Hugo and fixed some small errata with already existing articles.</description>
