@@ -1,11 +1,11 @@
-<div class="img-caption flex flex-vcenter flex-hcenter">
+<div class="img-caption flex items-center justify-center">
 	<figure class='text-center {{ if .Get "img2" }} mr-5 {{ end }}'>
-		<img class='{{ if .Get "atr1" }} {{ .Get "atr1" }} {{ else }} img100 {{ end }}' src='{{ .Get "img1" }}'>
+		<img class='{{ if .Get "atr1" }} {{ .Get "atr1" }} {{ else }} w-full {{ end }}' src='{{ .Get "img1" }}'>
 		{{ if .Get "cap1"}}<figcaption>{{ .Get "cap1" | safeHTML }}</figcaption>{{ end }}
 	</figure>
 	{{ if .Get "img2" }}
 	<figure class="text-center ml-5">
-		<img class='{{ if .Get "atr2" }} {{ .Get "atr2" }} {{ else }} img100 {{ end }}' src='{{ .Get "img2" }}'>
+		<img class='{{ if .Get "atr2" }} {{ .Get "atr2" }} {{ else }} w-full {{ end }}' src='{{ .Get "img2" }}'>
 		{{ if .Get "cap2"}}<figcaption>{{ .Get "cap2" | safeHTML }}</figcaption>{{ end }}
 	</figure>
 	{{ end }}

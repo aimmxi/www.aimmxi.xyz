@@ -27,15 +27,15 @@ Despite having white melamine furniture in my bedroom, my door, ceiling and wind
 
 The final dimensions of the rack look like this (All units in mm):
 
-{{< img-container img1="dims.png" atr1="img30 img-responsive" >}}
+{{< img-container img1="dims.png" atr1="w-2xs img-responsive" >}}
 			
 The interior is a bit wider than 254mm (10 inches) to allow for some play and account for the borders of the rack rails, and slightly taller too in case some cables need to be routed over or below the mounted components.
 			
 ### Bill of Materials
 Al usual, the BoM only takes into consideration the materials and not the tools. If a component has to be bought in bulk, that bulk's price is noted:
 			
-<table class="center f1-25">
-	<tr class="f1-50 row-b">
+<table class="mx-auto text-md">
+	<tr class="text-xl row-b">
 		<th class="bom-header">Item</th>
 		<th class="bom-header">Qty.</th>
 		<th class="bom-header">Price/Unit (EUR)</th>
@@ -95,14 +95,14 @@ When buying wood planks or boards, you might come across some places that offer 
 Since I had no jig to get straight cuts I had to improvise one with old planks of straight wood and rulers to serve as guides and a few clamps to keep it all together.
 		
 {{< img-container 
-		img1="jig.jpg" atr1="img75 img-responsive"
-		img2="finalcut.jpg" atr2="img75 img-responsive" >}}
+		img1="jig.jpg" atr1="w-md img-responsive"
+		img2="finalcut.jpg" atr2="w-md img-responsive" >}}
 		
 I measured everything and got to cutting all the pieces. Upon testing how all the pieces fitted, I noticed that one of them was not straight at all and did not fit properly. Luckily, there was quite a bit left of the 2 meter long board, so I had enough material to retry that cut and had all the pieces fit correctly.
 
 To test if everything was right I mounted a 10" patch panel and blank plate in the rack rails and placed them inside of the rack to see if further adjustments had to be made.
 
-{{< img-container img1="test.jpg" atr1="img30 img-responsive">}}
+{{< img-container img1="test.jpg" atr1="w-2xs img-responsive">}}
 		
 Everything looked good and it was time to screw it all together. To prevent the screws' heads from popping out, I drilled a small, 2mm-ish deep hole where each screw would be placed; this way, the heads would be flush with the surface.
 
@@ -112,7 +112,7 @@ The weather was pretty cold so it took 2 days for the hole filler to set, but on
 
 The varnish took 3 days to set and another few to stop producing fumes. Meanwhile, I designed some simple feet that would screw to the bottom of the rack and printed them in black PLA.
 		
-{{< img-container img1="feet.jpg" atr1="img30 img-responsive">}}
+{{< img-container img1="feet.jpg" atr1="w-2xs img-responsive">}}
 
 Finally, I screwed the rack feet and the rack rails making sure that both rails were aligned, attached the cage nuts to the rack rails and wrapped everything up.
 

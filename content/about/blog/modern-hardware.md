@@ -61,7 +61,7 @@ Just to prove this point, here's a list of products that have failed me in the p
  - The 2.0 TDI BKD engine in my Audi had to be replaced after it failed. The BKD model is known to fail extremely frequently. 
 
 
-{{< img-container img1="./omron.jpg" cap1="Failed Omron D2FC-F-7N(10M) switch." atr1="img50">}}
+{{< img-container img1="./omron.jpg" cap1="Failed Omron D2FC-F-7N(10M) switch." atr1="w-2xs">}}
 
 All of those failed due to bad engineering, planed obsolescence or cheap manufacturing, none failed because of extensive use.
 

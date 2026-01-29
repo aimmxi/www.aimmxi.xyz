@@ -11,12 +11,12 @@
 		<section class="showcase-c flex">
 			{{ if eq .Params.Showcase "image" -}} <img class="showcase-img" src="./showcase.jpg"> {{ end }}
 			{{ if eq .Params.Showcase "video" -}} <video class="showcase-vid" src="./showcase.webm" controls muted loop></video> {{ end }}
-			<div class="showcase-hoverable flex flex-vcenter">
+			<div class="showcase-hoverable flex items-center">
 				<img class="showcase-arrow" src="/assets/img/icons/arrows-back.svg">
 				<div class="showcase-txt-c">
 					<div class="showcase-txt flex">
-						<h1 class="f2">{{ .Params.Title }}</h1>
-						<i class="f1-50">{{ .Params.Datestr }}</i>
+						<h1 class="text-3xl">{{ .Params.Title }}</h1>
+						<i class="text-xl">{{ .Params.Datestr }}</i>
 						<p class="showcase-desc">{{ .Params.Abstract}}</p>
 						<div class="showcase-tags flex">
 							{{ range .Params.Tags }}
@@ -28,7 +28,7 @@
 							{{ end }}
 						</div>
 						<div class="toc">
-							<h4 class="f1-50">Index</h4>
+							<h4 class="text-xl">Index</h4>
 							{{ .TableOfContents }}
 						</div>
 					</div>

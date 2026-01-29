@@ -5,7 +5,7 @@ const observerLeft = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const target = entry.target;
-            target.classList.remove("hidden");
+            target.classList.remove("invisible");
             target.classList.add("throw-photo-left");
             observer.unobserve(target);
         }
@@ -18,7 +18,7 @@ const observerRight = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const target = entry.target;
-            target.classList.remove("hidden");
+            target.classList.remove("invisible");
             target.classList.add("throw-photo-right");
             observer.unobserve(target);
         }

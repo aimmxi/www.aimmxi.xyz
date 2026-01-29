@@ -15,7 +15,7 @@ When you start getting into computing you might come across a group of people fa
 
 The core aspect of homelabbing is setting up one or more machines as servers that provide services on your network or even through the internet. Said services can do anything, from mundane tasks like managing DHCP or DNS requests to hosting complex web apps. What you host is up to you and the only limitation is imposed by the hardware itself. In the process of setting everything up there are some other elements to take into consideration such as networking, hardware, power delivery, operating system management, deployment and configuration of the services and so on, it has a bit of everything and figuring it all out is part of the fun.
 
-{{< img-container img1="./carleton-rack.jpg" cap1="Multiple rack closets by <a href='https://carleton.ca/scs/tech-support/scs-rooms-support/scs-server-room/'>carleton.ca</a>" atr1="img50 img-responsive" >}}
+{{< img-container img1="./carleton-rack.jpg" cap1="Multiple rack closets by <a href='https://carleton.ca/scs/tech-support/scs-rooms-support/scs-server-room/'>carleton.ca</a>" atr1="w-sm img-responsive" >}}
 
 Aside from hosting something meaningful, which is the main objective, you might have additional constraints like keeping the cost as low as possible, keeping the power budget as low as possible, reusing old hardware, using low noise hardware, having hardware decoding for video playback, having IoT or home automation capabilities, having redundancy, having automated backups...
 
@@ -55,7 +55,7 @@ I chose this SBC to act as a main server because it has a Rockchip RK3588 SoC th
 
 Unlike on the other machines, I did not go the full passive cooling route with this one as it was going to be running quite a few containers and sometimes transcoding video in the background, which is quite resource intensive (Specially if the codec is not supported and the CPU has to do all the work). To achieve effective cooling with as little noise as possible I bought a Noctua PWM fan, hooked it up via GPIO to the Orange Pi and ran a PWM script to ramp up the fan when things get toasty. With the heatsink alone and average loads, the CPU is kept cool enough so that the fan never kicks in.
 
-{{< img-container img1="./opi5.jpg" atr1="img30 img-responsive" >}}
+{{< img-container img1="./opi5.jpg" atr1="w-2xs img-responsive" >}}
 
 #### Raspberry Pi 4 4GB
 A robust and balanced SBC with great software support by the Raspberry Pi Foundation.
@@ -64,12 +64,12 @@ It is not the mightiest machine out there, but it will primarily be used to run 
 			
 This machine is equipped with a Broadcom BCM2711 with 4 Cortex-A72 cores and 4 GB of LPDDR4 RAM. The use case of this machine allows for a passive thermal cooling solution; it will not require a fan for it's intended load.
 
-{{< img-container img1="./rpi4.jpg" atr1="img30 img-responsive" >}}
+{{< img-container img1="./rpi4.jpg" atr1="w-2xs img-responsive" >}}
 
 #### TPLink TL-SG1008D
 A switch is a piece of hardware that allows to connect multiple devices to the same network. Switches usually come in different shapes, sizes, number of ports and speeds. In my case, the homelab will be using a simple off-the-shelf TPLink TL-SG1008D gigabit switch with 8 ports. The whole network is designed to support gigabit speeds, so this switch, as simple as it is, is capable enough for this use case.
  
-{{< img-container img1="./tplink.jpg" atr1="img30 img-responsive" >}}
+{{< img-container img1="./tplink.jpg" atr1="w-2xs img-responsive" >}}
 
 ### Software
 In order to host some services you need an execution environment; that is an Operating System and a set of libraries that support the services. My operating system of choice for servers is Debian because of how robust and stable it is. I dislike Ubuntu and Ubuntu Server because it is not as minimal and Canonical, the corporation behind it, makes some questionable decisions from time to time that make them more annoying to manage than other distributions. Since I will be using SBCs, stock Debian might not be available, so I will stick to whatever is the closest to it.
@@ -91,13 +91,13 @@ Networking, from my point of view, is one of the most fun parts of homelabbing b
 
 On a serious production network ideally you would have a powerful router, a firewall and several switches to distribute all the traffic evenly with redundant components and links. This is of course prohibitively expensive and overkill for a homelab setup, so in order to make it more affordable I will stick to 1 Gbps speeds, use regular UTP cable instead of fibre and reuse hardware whenever possible.
 
-{{< img-container img1="./tidy-network.jpg" cap1="Tidy networking rack by <a href='https://www.mirroredgenetworks.com/tidy-installation-importance/'>Mirror Edge Networks</a>"  atr1="img30 img-responsive">}}
+{{< img-container img1="./tidy-network.jpg" cap1="Tidy networking rack by <a href='https://www.mirroredgenetworks.com/tidy-installation-importance/'>Mirror Edge Networks</a>"  atr1="w-2xs img-responsive">}}
 
 Despite the cost cutting, I would like to preserve the big network look with all the patch cords and such, so I will be using the patch panel and switch arrangement. On an actual 19" networking rack, when giving service to a network, the UTP cables are not run to the switch directly, instead, they are punched to a rack appliance called a "patch panel" that has cable holes in one end and a female RJ45 jack on the other which is connected to the switches via a small patch cord. This allows for better cable management, organization and easier troubleshooting on large networks. On my toy network it is mostly going to serve an aesthetical purpose.
 
 Instead of a classic patch panel where the UTP pairs have to get punched, I will be using a keystone variant where all holes of the patch panel can be filled with standard keystone jacks. This makes the patch panel more useful, as other types of keystones like HDMI or USB can be hooked to it. This could be useful in the future if for instance I want to have easy access to video from a certain machine.
 
-{{< img-container img1="./patchpanel.jpg" atr1="img30 img-responsive"
+{{< img-container img1="./patchpanel.jpg" atr1="w-2xs img-responsive"
     cap1="10\" keystone patch panel by <a href='https://deleycon.com/deleycon-12-port-patch-panel-modular-for-keystone-modules-1u-10-inches-rack-mounting-compatible-cat5-cat6-cat7-cat8-lan-network-black/'>deleyCON</a>" >}}
 
 All the cables are custom and made to length. I have used Cat 6A UTP cable for the entire network.
@@ -108,8 +108,8 @@ Most rack appliances use standard IEC C13 cables or power supplies that connect 
 It is probably the most uneventful part of the build. A simple unfused 19" rack mountable Power Distribution Unit by Monolyth is screwed to the back of the rack with wooden screws. It obviously cannot fit horizontally as it is 9" wider than the rack, but it fits well vertically with a custom adapter made out of some scrap metal i had laying around. This PDU is as simple as it gets, sporting just a few european Schuko sockets and an On/Off switch. 
 
 {{< img-container 
-    img1="./pdu.jpg" cap1="19\" Monolyth PDU."  atr1="img75 img-responsive"
-    img2="./pdu-adapter.jpg" cap2="Custom adapter." atr2="img75 img-responsive" >}}
+    img1="./pdu.jpg" cap1="19\" Monolyth PDU."  atr1="w-md img-responsive"
+    img2="./pdu-adapter.jpg" cap2="Custom adapter." atr2="w-md img-responsive" >}}
 
 			
 I would like to add an UPS in the future but it is not currently a priority. I do not mind some downtime caused by outages as pretty much everything else that will use the services in the rack will also be off.

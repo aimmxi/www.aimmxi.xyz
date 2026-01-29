@@ -13,25 +13,25 @@
 
 		{{ partial "abstract.html" . }}
 
-		<section class="listing-main center">
+		<section class="listing-main mx-auto">
 			<!-- For all computing projects, ordered by name in descending order and date -->
 			{{- $current := . -}}
 
 			{{- range sort (sort (where .Site.Pages ".Params.Category" $current.Params.Categorygroup) ".Title" "desc") ".Params.Datestr" "desc" -}}
 				<div class="listing-elem flex">
-					<div class="listing-img-c flex flex-vcenter">
+					<div class="listing-img-c flex items-center">
 						<img class="listing-img" src="{{ .RelPermalink }}/thumb.png"/>
 					</div>
 					<!-- Main fields -->
 					<div class="listing-txt-c">
 						<h4>{{ .Title }}</h4>
-						<i class="f1 block mb-10">{{ .Params.Datestr }}</i>
-						<div class="listing-desc flex flex-vcenter">
+						<i class="text-sm block mb-10">{{ .Params.Datestr }}</i>
+						<div class="listing-desc flex items-center">
 							<p class="mb-0">{{ .Params.Abstract }}</p>
 						</div>
 					</div>
 					<!-- Adds the tags -->
-					<div class="tag-view flex flex-vcenter flex-hcenter">
+					<div class="tag-view flex items-center justify-center">
 						{{ range .Params.Tags }}
   							{{- if eq . "Electronics" -}} {{ partial "tags/electronics.html"}} {{ end -}}
   							{{- if eq . "Handcrafts" -}} {{ partial "tags/handcrafts.html"}} {{ end -}}
@@ -41,8 +41,8 @@
 						{{ end }}
 					</div>
 
-					<div class="listing-view flex flex-vcenter flex-hcenter">
-						<a class="view-link f1-75" href="{{ .RelPermalink }}">View ></a>
+					<div class="listing-view flex items-center justify-center">
+						<a class="view-link text-2xl" href="{{ .RelPermalink }}">View ></a>
 					</div>
 				</div>
 			{{ end }}
