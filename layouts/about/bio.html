@@ -20,14 +20,22 @@
   		<img src="/assets/img/ff.png" class="ff" style="left:70vw; top:20vh;">
   		<img src="/assets/img/ff.png" class="ff" style="left:90vw; top:70vh;">
 
-		<section class="showcase flex flex-vcenter">
+		<svg>
+  			<path id="nameScratch"
+       			d="m 43.821267,78.196032 c -1.825927,18.555465 0.7335,33.273748 4.460846,46.970098 l 8.396891,-43.821263 1.836819,43.034053 9.184098,-41.72204 3.148833,43.29646 7.872084,-47.494905 5.510458,45.920485 7.347278,-43.034053 1.574419,42.246853 4.198443,-42.246853 9.708904,45.920483 0.78721,-46.445289 9.7089,42.246849 c 5.42299,-12.15799 6.29767,-25.715472 2.62403,-40.672433"
+       			/>
+		</svg>
+
+		<section class="showcase flex items-center">
 			<div class="large-img-c flex">
 				<img class="large-img" src="./bio_photo.gif">
 			</div>
 			<div class="intro-txt-c">
-				<div class="header flex flex-hcenter flex-vcenter">
-					<h1 id="font-flick" class="font-flick text-white">AIMMXI</h1>
+				<div>
+					<canvas id="nameScratchCanvas" class="name-scratch"></canvas>
+					<h1 class="name fade-in font-bytesized text-white text-4xl">AIMMXI</h1>
 				</div>
+				
 				<h5 id="typeText" data-subtext="{{ .Params.Caption1 }}" data-speed="{{ .Params.Speed1 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
 				<h5 id="typeText2" data-subtext="{{ .Params.Caption2 }}" data-speed="{{ .Params.Speed2 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
 				<h5 id="typeText3" data-subtext="{{ .Params.Caption3 }}" data-speed="{{ .Params.Speed3 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
@@ -90,8 +98,12 @@
 
 	{{ partial "footer.html" . }}
 
-	<script src="/assets/js/font-flick.js"></script>
 	<script src="/assets/js/type-text.js"></script>
 	<script src="/assets/js/throw-photo.js"></script>
 	<script src="/assets/js/fireflies.js"></script>
+	<script src="/assets/js/scratch.js"></script>
+	<script>
+		// Animate the scratch at the end of the name
+		animateScratch(["/assets/img/brush.png"], "nameScratch", "nameScratchCanvas", 20, 150, 8, 50);
+	</script>
 </body>

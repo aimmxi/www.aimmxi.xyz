@@ -6,6 +6,7 @@
 .text-xl{font-size: 1.5rem;}
 .text-2xl{font-size: 1.75rem;}
 .text-3xl{font-size: 2rem;}
+.text-4xl{font-size: 4rem;}
 
 /*----------Widths---------*/
 .w-2xs{width: 16rem;}

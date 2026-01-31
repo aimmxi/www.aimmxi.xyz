@@ -137,9 +137,9 @@ li{margin-bottom: auto;}
 @font-face{font-family: DDINBold; src: url("/assets/font/D-DINBold.ttf");}
 @font-face{font-family: UAVOSD; src: url("/assets/font/UAVOSD.ttf");}
 
+.font-bytesized{font-family: Bytesized;}
 .font-fp{font-family: FreePixel;}
 .font-vga{font-family: VGA;}
-.font-hack{font-family: hack;}
 .font-DDIN{font-family: DDIN;}
 .font-DDINBold{font-family: DDINBold;}
 
