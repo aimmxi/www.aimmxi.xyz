@@ -1,5 +1,5 @@
 /*----------Macros---------*/
-/*--------Font size--------*/
+/*----------Fonts----------*/
 .text-xs{font-size: 0.75rem;}
 .text-sm{font-size: 1rem;}
 .text-md{font-size: 1.25rem;}
@@ -7,6 +7,11 @@
 .text-2xl{font-size: 1.75rem;}
 .text-3xl{font-size: 2rem;}
 .text-4xl{font-size: 4rem;}
+.text-5xl{font-size: 5rem;}
+.text-black{color: black; text-decoration-color: black;}
+.text-white{color: white;}
+.text-cyan{color: var(--cyan);}
+.shaded{text-shadow: 5px 5px 0px black;}
 
 /*----------Widths---------*/
 .w-2xs{width: 16rem;}
@@ -14,13 +19,15 @@
 .w-sm{width: 24rem;}
 .w-md{width: 28rem;}
 .w-full{width: 100%;}
-
+.w-fit{width: fit-content;}
 
 /*--------Alignment--------*/
 .mx-auto{margin-left: auto; margin-right: auto;}
 .text-center{text-align: center;}
 .text-right{text-align: right;}
 .whitespace-nowrap{white-space: nowrap;}
+.relative{position: relative;}
+.absolute{position: absolute;}
 
 /*--------Margins-----------*/
 .m-0{margin: 0;}
@@ -37,13 +44,22 @@
 .mr-0{margin-right: 0px;}
 .mr-5{margin-right: 5px;}
 .mr-10{margin-right: 10px;}
+.m-auto{margin: auto;}
 
+/*--------Display-----------*/
 .block{display: block;}
+.inline-block{display: inline-block;}
 .flex{display: flex;}
 .justify-center{justify-content: center;}
 .items-center{align-items: center;}
 .invisible{visibility: hidden;}
 
-.text-black{color: black; text-decoration-color: black;}
-.text-white{color: white;}
-.text-cyan{color: var(--cyan);}
+/*--------Animations---------*/
+.delay-150{animation-delay: 150ms;}
+.delay-300{animation-delay: 300ms;}
+.delay-450{animation-delay: 450ms;}
+.delay-600{animation-delay: 600ms;}
+.delay-850{animation-delay: 850ms;}
+.delay-1000{animation-delay: 1s;}
+
+

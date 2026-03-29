@@ -10,39 +10,62 @@
 	{{ partial "navbar.html" . }}
 
 	<main>
-  		<img src="/assets/img/ff.png" class="ff" style="left:10vw; top:15vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:5vw; top:70vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:40vw; top:10vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:40vw; top:50vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:30vw; top:80vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:70vw; top:40vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:80vw; top:75vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:70vw; top:20vh;">
-  		<img src="/assets/img/ff.png" class="ff" style="left:90vw; top:70vh;">
+		<section id="showcase-c" class="showcase-c mx-auto">
 
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+  		<img src="/assets/img/ff.png" class="ff">
+
+    		<div class="showcase flex">
+				<div class="showcase-photo flex items-center justify-center">
+					<div class="showcase-photo-rotated">
+						{{ partial "framed-photo.html" (dict
+							"photo" "./bio_photo.png"
+							"background" "/assets/img/bgs/perlin.gif"
+						) }}
+					</div>
+				</div>
+				<div class="showcase-text m-auto">
+					<div class="flex mt-20">
+						<h1 class="font-bytesized shaded text-5xl mb-20">AIMMXI</h1>
+						<div class="badge-c inline-block grow-hover">
+							<div class="badge rotate-fast">
+  								<div class="badge-shine"></div>
+							</div>
+						</div>
+					</div>
+					
+					<h5 id="typeText" data-subtext="{{ .Params.Caption1 }}" data-speed="{{ .Params.Speed1 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
+					<h5 id="typeText2" data-subtext="{{ .Params.Caption2 }}" data-speed="{{ .Params.Speed2 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
+					<h5 id="typeText3" data-subtext="{{ .Params.Caption3 }}" data-speed="{{ .Params.Speed3 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
+					<br>
+					<i id="typeText4" data-subtext="{{ .Params.Caption4 }}" data-speed="{{ .Params.Speed4 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></i>
+
+					<!-- Next to name badge -->
+					
+				</div>
+    		</div>
+		</section>
+
+<!-- 
 		<svg>
   			<path id="nameScratch"
        			d="m 43.821267,78.196032 c -1.825927,18.555465 0.7335,33.273748 4.460846,46.970098 l 8.396891,-43.821263 1.836819,43.034053 9.184098,-41.72204 3.148833,43.29646 7.872084,-47.494905 5.510458,45.920485 7.347278,-43.034053 1.574419,42.246853 4.198443,-42.246853 9.708904,45.920483 0.78721,-46.445289 9.7089,42.246849 c 5.42299,-12.15799 6.29767,-25.715472 2.62403,-40.672433"
        			/>
 		</svg>
+-->
 
-		<section class="showcase flex items-center">
-			<div class="large-img-c flex">
-				<img class="large-img" src="./bio_photo.gif">
-			</div>
-			<div class="intro-txt-c">
-				<div>
-					<canvas id="nameScratchCanvas" class="name-scratch"></canvas>
-					<h1 class="name fade-in font-bytesized text-white text-4xl">AIMMXI</h1>
-				</div>
-				
-				<h5 id="typeText" data-subtext="{{ .Params.Caption1 }}" data-speed="{{ .Params.Speed1 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
-				<h5 id="typeText2" data-subtext="{{ .Params.Caption2 }}" data-speed="{{ .Params.Speed2 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
-				<h5 id="typeText3" data-subtext="{{ .Params.Caption3 }}" data-speed="{{ .Params.Speed3 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></h5>
-				<br>
-				<i id="typeText4" data-subtext="{{ .Params.Caption4 }}" data-speed="{{ .Params.Speed4 }}" data-timeout="{{ .Params.Timeout }}" class="shaded font-DDIN"></i>
-			</div>
-		</section>
 		<section class="desc-c flex mx-auto">
 			<div class="desc-txt">
 				<h2>About me</h2>
@@ -55,11 +78,6 @@
 
 				<p>I have plenty of hobbies and interests, but I would consider my main ones to be the following</p>
 
-			</div>
-			<div class="photo-c flex items-center throw-photo-left-js invisible">
-				<div class="photo-frame flex justify-center">
-					<img class="photo" src="./bio_photo2.png">
-				</div>
 			</div>
 		</section>
 		<section class="insights-c flex mx-auto">
@@ -79,7 +97,7 @@
 				<p class="text-black">More recently I've developed an interest in tinkering and creating physical objects. I've started to learn about <i>woodworking</i> as well as basic <i>mechanical engineering</i> to aid with larger projects. There's plenty of other miscellaneous, much smaller topics I enjoy, but since I do not have the time to pursue all of them, it remains mostly insignificant.</p>
 			</div>
 		</section>
-		<section class="flex mx-auto abtpage-c">
+		<section class="abtpage-c flex mx-auto">
 			<div class="abtpage-txt t">
 				<h2 class="text-black">About this webpage</h2>
 				<br>

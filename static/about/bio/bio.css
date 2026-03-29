@@ -1,4 +1,5 @@
 /*----------Bio---------*/
+:root{--scratch-width: 20rem;}
 main{overflow-x: hidden; position: relative;}
 svg{visibility: hidden; height: 0px;}
 
@@ -12,61 +13,59 @@ svg{visibility: hidden; height: 0px;}
 
 
 /*----------Showcase---------*/
+.showcase-c{
+	position: relative;
+	height: 87vh;
+	width: var(--bodywidth);
+	backdrop-filter: blur(1rem);
+	margin-top: -100vh;
+	margin-bottom: 100vh;
+	animation: dropDown 0.75s forwards;
+}
+
 .showcase{
-	height: 90vh;
-	width: 100%;
-	backdrop-filter: blur(10px);
-}
-
-.large-img-c{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	overflow: hidden;
-	height: 35vw;
-	justify-content: center;
-	transform: translate(-101%, -50%);
-}
-
-.large-img{
-	padding: 1rem;
-	margin: 0.25rem;
-	z-index: -2;
-	margin-left: 200%;
-	animation: slide-left 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
-	animation-delay: 1.5s;
-	background-color: var(--cyan2);
-}
-
-.name-scratch{
-	height: 16rem;
-	width: 20rem;
-}
-
-.name{
-	margin: -10.7rem 0rem 7rem 0rem;
-	padding-left: 4rem;
-}
-
-.intro-txt-c{
-	width: 40%;
-	margin-left: 50%;
-	padding-left: 2rem;
-	height: 75%;
-	color: white;
+	height: 95%;
+	overflow: visible;
+	width: 0%;
+	background-color: #FFFFFF40;
 	border-left: 3px solid var(--cyan);
+	animation: expandShowcase 0.75s var(--curve-expo) 1s forwards, titleOverflow 3s forwards;
 }
 
-.header{
-	background-image: url("/assets/img/scratch-brushed.gif");
-	background-repeat: no-repeat;
-	background-size: contain;
+.showcase-photo{  
+	flex: 0 0 auto;	 /* Have a fixed size while the showcase grows */
+	width: calc(var(--bodywidth) / 2);
+}
+
+.showcase-text{width: 100%;}
+
+.showcase-photo-rotated{
+	width: 60%;
+	rotate: -4deg;
+}
+
+
+/*----------Badge---------*/
+.badge-c{margin: 1rem 1rem 1rem 2rem;}
+
+.badge{
+	width: 4rem;
+	height: 4rem;
+	background-image: url("/assets/img/icons/icon.png");
+	background-size: cover;
 	background-position: center;
-	height: 50%;
+	background-color: black;
+	overflow: hidden;
 }
 
-.shaded{text-shadow: 5px 5px 0px black;}
-
+.badge-shine{
+	position: absolute;
+	width: 150%;
+	height: 0.35rem;
+	background: rgba(255, 255, 255, 0.7);
+	transform: rotate(45deg);
+	animation: scan 4s ease-in infinite;
+}
 
 /*----------Description---------*/
 .desc-c{
@@ -79,20 +78,6 @@ svg{visibility: hidden; height: 0px;}
 	width: 75%;
 	margin: 2rem;
 	position: relative;
-}
-
-.photo-c{margin: 2rem 5rem 2rem 5rem;}
-
-.photo-frame{
-	background-color: white;
-	aspect-ratio: 6/7;
-	margin: 1rem auto 1rem auto;
-}
-
-.photo{
-	position: relative;
-	width: 85%;
-	padding-bottom: 15%;
 }
 
 /*----------Insights---------*/
@@ -125,54 +110,35 @@ svg{visibility: hidden; height: 0px;}
 
 /*----------Fireflies---------*/
 .ff{
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
+	position: absolute;
+	z-index: -10;
+	width: 3rem;
+	height: 3rem;
 	background-image: url('/assets/img/ff.png');
-    transition: top 5s ease-in-out, left 5s ease-in-out;
-	animation: ff-fade-in 1s ease-in-out 1s forwards;
+	transition: top 5s ease-in-out, left 5s ease-in-out;
+	animation: ffFadeIn 2s ease-in-out 2s forwards;
 	opacity: 0;
 }
 
 
 /*----------Animations---------*/
-@keyframes slide-left {100% {margin-left: 0%;}}
-@keyframes slide-right {100% {margin-left: 25%;}}
-@keyframes ff-fade-in {100% {opacity: 0.3;}}
+@keyframes dropDown {100% {margin-top: 1rem; margin-bottom: 0px;}}
+@keyframes expandShowcase {100% {width: 100%;}}
+@keyframes ffFadeIn {100% {opacity: 0.3;}}
 
 
 /*----------Responsive Design---------*/
 /*----------Large---------*/
 @media screen and (max-width: 1024px) {
 	.showcase{flex-direction: column;}
-	.name{padding: 0px;}
-
-	.large-img-c{
-		position: relative;
-		left: 0;
-		top: 0;
-		transform: none;
-		height: 90vw;
-		margin: 1rem auto 4rem auto;
-	}
-
-	.intro-txt-c{
-		height: auto;
-		width: var(--bodywidth);
-		color: white;
-		border-left: none;
-		text-align: center;
-		margin: auto 0 auto 0;
-		padding: 0 0 2rem 0;
-	}
-
+	
 	.header{height: 9rem;}
 	.insights-c{flex-wrap: wrap;}
 	.insight1, .insight2, .insight3{flex-basis: auto;}
 	.insight1{border-top: 3px solid var(--cyan);}
 	.insight3{border-bottom: 3px solid var(--cyan);}
 	.desc-c{flex-wrap: wrap; }
-
+	
 	.desc-txt{
 		width: 100%; 
 		margin-bottom: 0px;
@@ -182,5 +148,4 @@ svg{visibility: hidden; height: 0px;}
 /*----------Small---------*/
 @media screen and (max-width: 640px) {
 	html{font-size: 12px;}
-	.content{margin: 20px;}
 }

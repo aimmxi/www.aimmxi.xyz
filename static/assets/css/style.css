@@ -179,7 +179,7 @@ li{margin-bottom: auto;}
 	background-color: #FFFFFF40;
 	border-left: 3px solid var(--cyan);
 	backdrop-filter: blur(10px);
-	animation: expand-title 0.75s var(--curve-expo) forwards, title-overflow 3s forwards;
+	animation: expandTitle 0.75s var(--curve-expo) forwards, titleOverflow 1s forwards;
 }
 
 .title-back{
@@ -215,6 +215,24 @@ li{margin-bottom: auto;}
 
 .abstract-txt{margin: 2rem;}
 .endsig{width: 2.5rem;}
+
+/* For framed photos */
+.framed-photo-borders{
+	background-color: white;
+	aspect-ratio: 6/7;
+	box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.5);
+	border: 1px solid white;		/* This is required because of CSS margin collapsing. If not pressent, the childs margin will apply to this div */
+}
+
+.framed-photo{
+	margin-top: 8%;
+	aspect-ratio: 1/1;
+	width: 85%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+}
 
 
 /*----------Responsive Design---------*/
