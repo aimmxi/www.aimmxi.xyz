@@ -5,5 +5,5 @@ abstract: "An assorted list of project that cannot be qualified into any other b
 categorygroup: "misc"
 subtext: "Anything goes, really"
 speed: "45"
-timeout: "750"
+delay: "750"
 ---

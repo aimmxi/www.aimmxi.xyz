@@ -5,5 +5,5 @@ abstract: "For all computing related projects. Programming, hardware, systems ad
 categorygroup: "computing"
 subtext: "My kingdom for a computer"
 speed: "55"
-timeout: "750"
+delay: "750"
 ---
