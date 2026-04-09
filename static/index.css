@@ -107,17 +107,14 @@ p{margin: 0px;}
 
 /*----------Responsive Design---------*/
 /*----------Large---------*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px){
 	.logo{width:75%;}
-	
 }
 
 /*----------Medium---------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
 	.disclaimer{min-width: 300px;}
-	.main-section{
-		display: block;
-	}
+	.main-section{display: block;}
 	.about-c, .projects-c, .galleries-c{
 		margin: 20px auto 20px auto;
 		animation: none;
@@ -125,6 +122,6 @@ p{margin: 0px;}
 }
 
 /*----------Small---------*/
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px){
 	.disclaimer{min-width: none;}
 }
