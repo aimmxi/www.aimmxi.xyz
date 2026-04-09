@@ -183,13 +183,7 @@
 
 
 /*----------Photos---------*/
-.throw-photo-left{
-	animation: throwPhotoLeft 1s var(--curve-quart) forwards;
-	animation-name: throwPhotoLeft;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;			/* TODO */
-}
+.throw-photo-left{animation: throwPhotoLeft 1s var(--curve-quart) forwards;}
 @keyframes throwPhotoLeft{
 	from {transform: translateX(100vw) rotate(10deg);}
 	to {transform: translateX(0) rotate(-10deg);}
