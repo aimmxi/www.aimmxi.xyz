@@ -1,5 +1,4 @@
 /*----------Bio---------*/
-:root{--scratch-width: 20rem;}
 main{overflow-x: hidden; position: relative;}
 svg{visibility: hidden; height: 0px;}
 
@@ -44,6 +43,24 @@ svg{visibility: hidden; height: 0px;}
 	rotate: -4deg;
 }
 
+/*----------Leaves---------*/
+.leaf-stroke-top-c, .leaf-stroke-bottom-c{
+	width: 45%;
+	aspect-ratio: 2/1;
+}
+
+.leaf-stroke-top-c{
+	margin-right: -30%;
+	margin-bottom: 50%;
+	rotate: -15deg;
+	z-index: 2;
+}
+
+.leaf-stroke-bottom-c{
+	margin-left: -30%;
+	margin-top: 45%;
+	rotate: -195deg;
+}
 
 /*----------Badge---------*/
 .badge-c{margin: 1rem 1rem 1rem 2rem;}
@@ -131,6 +148,13 @@ svg{visibility: hidden; height: 0px;}
 /*----------Large---------*/
 @media screen and (max-width: 1024px) {
 	.showcase{flex-direction: column;}
+	.showcase-photo{margin: auto;}
+	.type-text{text-align: center;}
+	.badge-c{margin: 0 0 1rem 0;}
+	.showcase-text-title{
+		text-align: center;
+		display: block;
+	 }
 	
 	.header{height: 9rem;}
 	.insights-c{flex-wrap: wrap;}
@@ -148,4 +172,9 @@ svg{visibility: hidden; height: 0px;}
 /*----------Small---------*/
 @media screen and (max-width: 640px) {
 	html{font-size: 12px;}
+
+	.showcase-photo{
+		width: auto;
+		margin: auto;
+	}
 }
