@@ -3,7 +3,7 @@
 <head>
 	{{ partial "head.html" . }}
 	<link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
-	<link rel="stylesheet" type="text/css" href="./models.css">
+	<link rel="stylesheet" type="text/css" href="./_index.css">
 </head>
 
 
@@ -16,6 +16,7 @@
 		{{ partial "abstract.html" . }}
 
 		<section class="grid-display">
+			{{ $sortedPages := sort .Pages "Params.index" "asc" }}
 			{{ $models := where .Site.RegularPages "File.Dir" "eq" "galleries/models/" }}
 			{{ $sorted := sort $models "Params.index" "desc" }}
 
