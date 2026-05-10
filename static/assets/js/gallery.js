@@ -3,17 +3,16 @@ const overlay = document.getElementById('photo-overlay');
 const photo = document.getElementById('photo');
 const label = document.getElementById('photo-label');
 
-const photoPath = "./img/";
+const photoPath = "./";
 
 // For each thumbnail, add display trigger for the overlay
 thumbs.forEach(thumb => {
 	// Listen for clicks on each div
 	thumb.addEventListener('click', (event) => {
-		const clickedThumb = event.target.closest('.thumb-c');  // Ensure you're getting the div that contains the data attribute
+		const clickedThumb = event.target.closest('.thumb-c');
 
 		// Read the filename from the data-filename attribute
 		const filename = clickedThumb.getAttribute('data-filename');
-		console.log('Clicked image info:', filename);
 
 		// Display the overlay with the selected image
 		displayOverlay(filename);

@@ -16,18 +16,15 @@
 		{{ partial "abstract.html" . }}
 
 		<section class="grid-display">
-			{{ range .Params.images }}
-					<div class="thumb-c" data-filename="{{ . }}"><img class="thumb" src="./thumbs/{{ . }}"></div>
-			{{ end }}
+			{{ $images := sort (.Resources.ByType "image") "Name" "desc" }}
 
+			{{ range $images }}
+				{{ $thumb := .Fill "300x300 webp" }}
 
-			{{ range .Resources.ByType "image" }}
-  				<img src="{{ .RelPermalink }}" alt="{{ .Name }}" style="max-width: 300px;">
+				<div class="thumb-c" data-filename="{{ .Name }}"><img src="{{ $thumb.RelPermalink }}"></div>
 			{{ end }}
 		</section>
 	</main>
-
-	{{ partial "footer.html" . }}
 
 	<div class="overlay flex justify-center" id="photo-overlay">
 		<div class="overlay-img-c flex items-center justify-center">
@@ -37,6 +34,8 @@
 			<p id="photo-label" class="overlay-label text-black"></p>
 		</div>
 	</div>
+
+	{{ partial "footer.html" . }}
 
 	<script src="/assets/js/type-text.js"></script>
 	<script src="/assets/js/gallery.js"></script>

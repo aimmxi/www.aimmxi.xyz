@@ -12,12 +12,6 @@
 .thumb-c:hover{border: 3px dashed var(--cyandark);}
 .thumb-c img{ object-fit: cover;}
 
-.thumb{
-	transform: scale(2);
-	height: 13rem;
-	margin-left: -50%;
-}
-
 .overlay{
 	display: none;
 	position: fixed;
