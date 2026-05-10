@@ -16,13 +16,15 @@
 		{{ partial "abstract.html" . }}
 
 		<section class="grid-display">
-			{{ $sortedPages := sort .Pages "Params.index" "asc" }}
-			{{ $models := where .Site.RegularPages "File.Dir" "eq" "galleries/models/" }}
-			{{ $sorted := sort $models "Params.index" "desc" }}
+			{{ $items := sort .Pages "File.ContentBaseName" "desc" }}
 
-    		{{ range $sorted }}
+    		{{ range $items }}
 				<div class="model flex">
-						<img class="model-img" src="/galleries/models/thumbs/{{ .Params.Thumb }}">
+						{{ with .Resources.GetMatch "thumb*" }}
+							{{ $thumb := .Process "q90 webp" }}
+							<img class="model-img" src="{{ $thumb.RelPermalink }}">
+						{{ end }}
+
 						<div class="model-body">
 							<h4 class="text-md">{{ .Title }}</h4>
 							<i class="text-sm text-cyan mb-10 block">{{ .Params.Subtitle }}</i>
@@ -31,8 +33,9 @@
 						</div>
 						<div class="model-footer flex">
 							<div class="model-footer-download-c flex items-center">
-								<a href="/galleries/models/files/{{ .Params.Filename }}-blend.tar.gz" class="download-link flex items-center"><img src="/assets/img/icons/blender.svg" width=24px>.blend</a>
-								<a href="/galleries/models/files/{{ .Params.Filename }}-stl.tar.gz" class="download-link flex items-center"><img src="/assets/img/icons/misc.svg" width=24px>.stl</a>
+								{{ $pageUrl := .RelPermalink }}
+								<a href="{{$pageUrl}}{{ .Params.Filetag }}-blend.tar.gz" class="download-link flex items-center"><img src="/assets/img/icons/blender.svg" width=24px>.blend</a>
+								<a href="{{$pageUrl}}{{ .Params.Filetag }}-stl.tar.gz" class="download-link flex items-center"><img src="/assets/img/icons/misc.svg" width=24px>.stl</a>
 							</div>
 							<div class="model-footer-links-c flex items-center">
 								<a href="{{ .Params.Thingiverse }}" class="thingiverse-link flex items-center"><img src="/assets/img/icons/thingiverse.png" width=24></a>
