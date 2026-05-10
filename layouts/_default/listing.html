@@ -20,7 +20,10 @@
 			{{- range sort (sort (where .Site.Pages ".Params.Category" $current.Params.Categorygroup) ".Title" "desc") ".Params.Datestr" "desc" -}}
 				<div class="listing-elem flex">
 					<div class="listing-img-c flex items-center">
-						<img class="listing-img" src="{{ .RelPermalink }}/thumb.png"/>
+						{{ with .Resources.Get "thumb.png" }}
+							{{ $webp := .Process "q90 webp" }}
+							<img class="listing-img" src="{{ $webp.RelPermalink }}"/>
+						{{ end }}
 					</div>
 					<!-- Main fields -->
 					<div class="listing-txt-c">
