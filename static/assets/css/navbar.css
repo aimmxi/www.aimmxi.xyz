@@ -33,23 +33,26 @@
 .dropdown-c{
 	background-color: white;
 	position: absolute;
+	top: 100%;
+	left: 0;
 	z-index: 10;
-	overflow: hidden;
 	width: 100%;
 	min-width: 3rem;
 	border: 3px solid var(--cyan);
+
+	/* Smooth anim */
 	opacity: 0;
-	max-height: 0;
-	transition: max-height 0.15s linear;
-	overflow: hidden;
+	transform: translateY(-10px) scaleY(0.95);
+	transform-origin: top center;
+	pointer-events: none;
+	transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .navbar-elem:hover .dropdown-c{
 	opacity: 1;
-	max-height: var(--max-navbar-dropdown-height);
+	transform: translateY(0) scaleY(1);
+	pointer-events: auto;
 }
-
-.navbar-elem:not(:hover) .dropdown-c {transition-delay: 1s;}
 
 .navbar-link, .navbar-link:hover{
 	font-weight: bold;
