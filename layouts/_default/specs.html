@@ -13,17 +13,18 @@
 		{{ partial "slide-header.html" . }}
 
 		<section class="computing-c flex mx-auto">
-			<div class="computing-img-top-c flex items-center justify-center">
+			<div class="computing-img-top-c flex items-center justify-center mr-10">
 				<div class="photo-frame-centered throw-photo-right-js invisible">
-					<div class="photo-frame1 flex justify-center">
-						<img class="photo-bg" src="./pc.gif">
-					</div>
+					{{ partial "framed-photo.html" (dict
+						"photo" "./lap.gif"
+					) }}
 				</div>
 				<div class="photo-frame-centered throw-photo-right-js invisible">
-					<div class="photo-frame2 flex justify-center">
-						<img class="photo-bg" src="./lap.gif">
-					</div>
+					{{ partial "framed-photo.html" (dict
+						"photo" "./pc.gif"
+					) }}
 				</div>
+				
 			</div>
 			<div class="computing-txt-c">
 				<h2>Computing</h2>
@@ -70,16 +71,16 @@
 
 				<p>Most of my other equipment is not relevant and pretty much all of the tools I use for larger projects are store-branded or unremarkable. Perhaps the most interesting one is the Parkside SMD soldering station I use for my elecronics projects; which is not exceptional, but its low price makes up for its modest performance.</p>
 			</div>
-			<div class="computing-img-bottom-c flex items-center justify-center">
+			<div class="computing-img-bottom-c flex items-center justify-center ml-100">
 				<div class="photo-frame-mx-autoed throw-photo-left-js invisible">
-					<div class="photo-frame1 flex justify-center">
-						<img class="photo-bg" src="./printer.gif">
-					</div>
+					{{ partial "framed-photo.html" (dict
+						"photo" "./printer.gif"
+					) }}
 				</div>
 				<div class="photo-frame-centered throw-photo-left-js invisible">
-					<div class="photo-frame2 flex justify-center">
-						<img class="photo-bg" src="./camera.gif">
-					</div>
+					{{ partial "framed-photo.html" (dict
+						"photo" "./camera.gif"
+					) }}
 				</div>
 			</div>
 		</section>

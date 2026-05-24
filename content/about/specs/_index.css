@@ -15,14 +15,7 @@ main{overflow-x: hidden;}
 	background-color: black;
 }
 
-.photo-frame-centered{margin: 40px auto 40px auto;}
-
-.photo-frame1, .photo-frame2{
-	background-color: white;
-	max-height: 40%;
-	aspect-ratio: 6/7;
-	margin: auto 2rem auto 2rem;
-}
+.photo-frame-centered{margin: 4rem;}
 
 .photo-bg{
 	width: 85%;

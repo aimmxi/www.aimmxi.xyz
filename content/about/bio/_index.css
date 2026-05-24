@@ -36,6 +36,7 @@ svg{visibility: hidden; height: 0px;}
 	width: calc(var(--bodywidth) / 2);
 }
 
+.small-photo-c{padding: 3rem;}
 .showcase-text{width: 100%;}
 
 .showcase-photo-rotated{
