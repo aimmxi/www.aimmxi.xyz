@@ -36,7 +36,11 @@ svg{visibility: hidden; height: 0px;}
 	width: calc(var(--bodywidth) / 2);
 }
 
-.small-photo-c{padding: 3rem;}
+.small-photo-c{
+	padding: 3rem;
+	width: 30%;
+}
+
 .showcase-text{width: 100%;}
 
 .showcase-photo-rotated{
@@ -162,6 +166,7 @@ svg{visibility: hidden; height: 0px;}
 	.insight1, .insight2, .insight3{flex-basis: auto;}
 	.insight1{border-top: 3px solid var(--cyan);}
 	.insight3{border-bottom: 3px solid var(--cyan);}
+	.small-photo-c { width: 50%; }
 	.desc-c{flex-wrap: wrap; }
 	
 	.desc-txt{
@@ -178,4 +183,6 @@ svg{visibility: hidden; height: 0px;}
 		width: auto;
 		margin: auto;
 	}
+
+	.small-photo-c { width: 80%; }
 }
