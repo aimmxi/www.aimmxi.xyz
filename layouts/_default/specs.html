@@ -15,14 +15,20 @@
 		<section class="computing-c flex mx-auto">
 			<div class="computing-img-top-c flex items-center justify-center mr-10">
 				<div class="photo-frame-centered throw-photo-right-js invisible">
-					{{ partial "framed-photo.html" (dict
-						"photo" "./lap.gif"
-					) }}
+					{{ with .Resources.Get "laptop.jpg" }}
+						{{ $webp := .Process "fit 500x500 q90 webp" }}
+						{{ partial "framed-photo.html" (dict
+							"photo" $webp.RelPermalink
+						) }}
+					{{ end }}
 				</div>
 				<div class="photo-frame-centered throw-photo-right-js invisible">
-					{{ partial "framed-photo.html" (dict
-						"photo" "./pc.gif"
-					) }}
+					{{ with .Resources.Get "pc.jpg" }}
+						{{ $webp := .Process "fit 500x500 q90 webp" }}
+						{{ partial "framed-photo.html" (dict
+							"photo" $webp.RelPermalink
+						) }}
+					{{ end }}
 				</div>
 				
 			</div>
@@ -73,14 +79,20 @@
 			</div>
 			<div class="computing-img-bottom-c flex items-center justify-center ml-100">
 				<div class="photo-frame-mx-autoed throw-photo-left-js invisible">
-					{{ partial "framed-photo.html" (dict
-						"photo" "./printer.gif"
-					) }}
+					{{ with .Resources.Get "printer.jpg" }}
+						{{ $webp := .Process "fit 500x500 q90 webp" }}
+						{{ partial "framed-photo.html" (dict
+							"photo" $webp.RelPermalink
+						) }}
+					{{ end }}
 				</div>
 				<div class="photo-frame-centered throw-photo-left-js invisible">
-					{{ partial "framed-photo.html" (dict
-						"photo" "./camera.gif"
-					) }}
+					{{ with .Resources.Get "camera.jpg" }}
+						{{ $webp := .Process "fit 500x500 q90 webp" }}
+						{{ partial "framed-photo.html" (dict
+							"photo" $webp.RelPermalink
+						) }}
+					{{ end }}
 				</div>
 			</div>
 		</section>
