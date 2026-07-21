@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/error.css">
+</head>
+
+<body id="body">
+	<!-- Background noise div -->
+	<div id="bg-noise" class="bg-noise"></div>
+
+	<main>
+		<section class="main-box mx-auto flex items-center justify-center">
+			<div>
+				<img class="reinier" src="{{ .Params.ImagePath }}">
+			</div>
+			
+			<div class="textbox">
+				<h1>{{ .Params.ErrorCode }}</h1>
+				<p class="font-bytesized text-cyan mb-30 text-xl">{{ .Params.Caption }}</p>
+				<p></p>
+				<p class="text-sm mb-0">{{ .Params.Body1 }}</p>
+				<p class="text-sm">{{ .Params.Body2 }}</p>
+			</div>
+		</section>
+	</main>
+
+	<script src="/assets/js/background-noise.js"></script>
+</body>

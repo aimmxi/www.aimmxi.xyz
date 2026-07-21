@@ -1,3 +1,10 @@
+Platform update 1.3r0 (2026-07-21):
+    - Redesigned biography
+    - Added image compression on thumbnails
+    - Fixed footer on website blogpost
+    - Cleaned up article generation and adapted code to use Hugo's features.
+    - Simplified some dirty HTML and CSS lines. 
+
 Platform update 1.2r0 (2025-09-28):
     - Added full responsive design support
     - Reworked some UI components like the navbar and the project showcase boxes

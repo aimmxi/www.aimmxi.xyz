@@ -1,51 +1,73 @@
-const images = document.querySelectorAll('.ff');
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.ff');
+  const container = document.getElementById('showcase-c'); // Container element
 
-// Maximum distance per move
-const maxMove = 100;
+  // Check if container is found
+  if (!container) {
+    console.error('Container element not found');
+    return;
+  }
 
-// Array to hold the state of each image
-const imageStates = Array.from(images).map(image => {
-  const imageWidth = image.offsetWidth;
-  const imageHeight = image.offsetHeight;
+  // Maximum distance per move
+  const maxMove = 200;
 
-  // Get the current computed position (left/top) from the DOM
-  const style = getComputedStyle(image);
-  let currentX = parseFloat(style.left) || 0; // Default to 0 if not set
-  let currentY = parseFloat(style.top) || 0;
+  // Array to hold the state of each image
+  const imageStates = Array.from(images).map(image => {
+    const imageWidth = image.offsetWidth;
+    const imageHeight = image.offsetHeight;
 
-  return {
-    image,         // Reference to the DOM element
-    imageWidth,    // Width of the image
-    imageHeight,   // Height of the image
-    currentX,      // Current horizontal position
-    currentY       // Current vertical position
-  };
-});
+    // Get the container's bounds using offset properties
+    const containerLeft = container.offsetLeft;
+    const containerTop = container.offsetTop;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
-// Function to move each image in a random zigzag pattern
-function moveZigzag() {
-  imageStates.forEach(state => {
-    // Generate random movement deltas within the range [-maxMove, maxMove]
-    const dx = (Math.random() - 0.5) * 2 * maxMove;
-    const dy = (Math.random() - 0.5) * 2 * maxMove;
+    // Generate a random starting position inside the container
+    const randomX = Math.random() * (containerWidth - imageWidth * 2);
+    const randomY = Math.random() * (containerHeight - imageHeight * 2);
 
-    // Calculate the new proposed position
-    let nextX = state.currentX + dx;
-    let nextY = state.currentY + dy;
+    // Set the initial position of the image using randomX and randomY
+    image.style.left = `${randomX}px`;
+    image.style.top = `${randomY}px`;
 
-    // Clamp the position so the image stays inside the viewport
-    nextX = Math.max(0, Math.min(window.innerWidth - state.imageWidth, nextX));
-    nextY = Math.max(0, Math.min(window.innerHeight - state.imageHeight, nextY));
-
-    // Update the state with the new position
-    state.currentX = nextX;
-    state.currentY = nextY;
-
-    // Move the image to the new position
-    state.image.style.left = `${nextX}px`;
-    state.image.style.top = `${nextY}px`;
+    return {
+      image,         // Reference to the DOM element
+      imageWidth,    // Width of the image
+      imageHeight,   // Height of the image
+      currentX: randomX, // Current horizontal position (starting position)
+      currentY: randomY, // Current vertical position (starting position)
+      containerLeft,     // Container's left position
+      containerTop,      // Container's top position
+      containerWidth,    // Container's width
+      containerHeight    // Container's height
+    };
   });
-}
 
-// Repeat the zigzag movement every 500 milliseconds
-setInterval(moveZigzag, 500);
+  // Function to move each image in a random zigzag pattern
+  function moveZigzag() {
+    imageStates.forEach(state => {
+      // Generate random movement deltas within the range [-maxMove, maxMove]
+      const dx = (Math.random() - 0.5) * 2 * maxMove;
+      const dy = (Math.random() - 0.5) * 2 * maxMove;
+
+      // Calculate the new proposed position
+      let nextX = state.currentX + dx;
+      let nextY = state.currentY + dy;
+
+      // Clamp the position so the image stays inside the container
+      nextX = Math.max(0, Math.min(state.containerWidth - state.imageWidth * 2 , nextX));
+      nextY = Math.max(0, Math.min(state.containerHeight - state.imageHeight * 2, nextY));
+
+      // Update the state with the new position
+      state.currentX = nextX;
+      state.currentY = nextY;
+
+      // Move the image to the new position
+      state.image.style.left = `${nextX}px`;
+      state.image.style.top = `${nextY}px`;
+    });
+  }
+
+  // Change direction each second
+  setInterval(moveZigzag, 150);
+});

@@ -16,17 +16,14 @@ main{
     display: flex;
 }
 
-.main-box{
-    width: fit-content;
-}
+.main-box{height: 100vh;}
+.reinier{display: block;}
 
 .textbox{
     border-left: 3px solid var(--cyan);
     padding: 20px;
     margin: 20px;
 }
-
-.error-desc{padding-top: 20px;}
 
 .bg-noise{
     background: url("/assets/img/bgs/noise.png");
@@ -39,3 +36,20 @@ main{
 }
 
 
+/*----------Responsive Design---------*/
+/*----------Medium---------*/
+@media screen and (max-width: 768px){
+    .main-box{
+        display: block; 
+        height: fit-content; 
+        margin:auto;
+    }
+
+    .reinier{margin: auto;}
+    .textbox{
+        height: 40vh;
+        display: block;
+        border-left: none;
+        border-top: 3px solid var(--cyan);
+    }
+}

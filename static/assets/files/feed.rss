@@ -7,6 +7,20 @@
     <language>en-us</language>
 
     <item>
+      <title>Platform update 1.3r0</title>
+      <link>https://www.aimmxi.xyz</link>
+      <description>
+    - Redesigned biography
+    - Added image compression on thumbnails
+    - Fixed footer on website blogpost
+    - Cleaned up article generation and adapted code to use Hugo's features.
+    - Simplified some dirty HTML and CSS lines. 
+      </description>
+      <pubDate>Wed, 21 Jul 2026 23:00:00 GMT</pubDate>
+      <guid isPermaLink="false">2026-07-22</guid>
+    </item>
+
+    <item>
       <title>Platform update 1.2r0</title>
       <link>https://www.aimmxi.xyz</link>
       <description>Added full responsive design support and reworked some UI components.</description>

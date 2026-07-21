@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="./_index.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		{{ partial "slide-header.html" . }}
+
+		{{ partial "abstract.html" . }}
+
+		<section class="grid-display">
+			{{ $images := sort (.Resources.ByType "image") "Name" "desc" }}
+
+			{{ range $images }}
+				{{ $thumb := .Fill "300x300 webp" }}
+
+				<div class="thumb-c" data-filename="{{ .Name }}"><img src="{{ $thumb.RelPermalink }}"></div>
+			{{ end }}
+		</section>
+	</main>
+
+	<div class="overlay flex justify-center" id="photo-overlay">
+		<div class="overlay-img-c flex items-center justify-center">
+			<img class="overlay-img" id="photo" src="">
+		</div>
+		<div class="overlay-label-c flex items-center justify-center">
+			<p id="photo-label" class="overlay-label text-black"></p>
+		</div>
+	</div>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/gallery.js"></script>
+</body>

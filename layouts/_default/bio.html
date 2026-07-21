@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="./_index.css">
+</head>
+
+
+<body>
+	{{ partial "navbar.html" . }}
+
+	<main>
+		<section id="showcase-c" class="showcase-c mx-auto">
+			<!-- Fireflies -->
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+  			<img src="/assets/img/ff.png" class="ff">
+
+    		<div class="showcase flex">
+				<div class="showcase-photo flex items-center justify-center">
+					<canvas class="leaf-stroke-top-c" id="topLeafStroke"></canvas>
+					<div class="showcase-photo-rotated">
+						{{ partial "framed-photo.html" (dict
+							"photo" "./bio1.png"
+							"background" "/assets/img/bgs/perlin.gif"
+						) }}
+					</div>
+					<canvas class="leaf-stroke-bottom-c" id="bottomLeafStroke"></canvas>
+				</div>
+				<div class="showcase-text m-auto">
+					<div class="showcase-text-title flex mt-20">
+						<h1 class="font-bytesized shaded text-5xl">AIMMXI</h1>
+						<div class="badge-c inline-block grow-hover">
+							<div class="badge rotate-fast">
+  								<div class="badge-shine"></div>
+							</div>
+						</div>
+					</div>
+					
+					<h5 data-subtext="{{ .Params.Caption1 }}" data-speed="{{ .Params.Speed1 }}" data-delay="{{ .Params.Delay }}" class="type-text shaded font-DDIN mt-20"></h5>
+					<h5 data-subtext="{{ .Params.Caption2 }}" data-speed="{{ .Params.Speed2 }}" data-delay="{{ .Params.Delay }}" class="type-text shaded font-DDIN"></h5>
+					<h5 data-subtext="{{ .Params.Caption3 }}" data-speed="{{ .Params.Speed3 }}" data-delay="{{ .Params.Delay }}" class="type-text shaded font-DDIN"></h5>
+					<br>
+					<i data-subtext="{{ .Params.Caption4 }}" data-speed="{{ .Params.Speed4 }}" data-delay="{{ .Params.Delay }}" class="type-text shaded font-DDIN block mb-20"></i>
+				</div>
+    		</div>
+		</section>
+
+
+		<section class="desc-c flex mx-auto">
+			<div class="desc-txt">
+				<h2>About me</h2>
+				<br>
+				<p>I am AIMMXI (Ax for short), a CS student based in northern Spain that loves creating, experimenting and tinkering with technology amongst many other things.</p>
+
+				<p>I have always been drawn to intricate creations that are beyond my understanding; it sparks my curiosity and delving into their inner workings is really satisfying and interesting. Computers, for example, are incredibly complex and practically limitless in terms of what they enable you to do.</p>
+
+				<p>After years of being a spectator of other people's creations I came to the conclusion that I wanted to contribute to the world with my very own creative projects. In 2021, I started developing and building my own projects, and since then, I have been looking forward to learning new skills and making new inventions.</p>
+
+				<p>I have plenty of hobbies and interests, but I would consider my main ones to be the following</p>
+			</div>
+			<div class="small-photo-c m-auto throw-photo-left-js invisible">
+				{{ partial "framed-photo.html" (dict
+					"photo" "./bio2.png"
+					"background" "/assets/img/bgs/mountains.png"
+				) }}
+			</div>
+		</section>
+		<section class="insights-c flex mx-auto">
+			<div class="insight1 text-white">
+				<h2>Technology</h2>
+				<br>
+				<p>Due to my background in CS and IT, I've grown to like all things technology-related, such as <i class="text-cyan">electronics</i> and materializing things through practical <i class="text-cyan">3D modeling</i>  and 3D printing. Of course, I still enjoy some other IT-related activities such as <i class="text-cyan">systems administration</i> or some casual <i class="text-cyan">programming</i> sessions from time to time.</p>
+			</div>
+			<div class="insight2">
+				<h2 class="text-black">Nature</h2>
+				<br>
+				<p class="text-black">For several years computing stood out as my main hobby, but since I was raised in a rural area, <i class="text-white">nature</i> and <i class="text-white">agriculture</i> were part of my childhood, and I have grown to like them even more. I enjoy strolls through natural, quiet environments and occasionally participate in <i class="text-white">photography</i>.</p>
+			</div>
+			<div class="insight3 text-black">
+				<h2 class="text-black">Tinkering</h2>
+				<br>
+				<p class="text-black">More recently I've developed an interest in tinkering and creating physical objects. I've started to learn about <i>woodworking</i> as well as basic <i>mechanical engineering</i> to aid with larger projects. There's plenty of other miscellaneous, much smaller topics I enjoy, but since I do not have the time to pursue all of them, it remains mostly insignificant.</p>
+			</div>
+		</section>
+		<section class="abtpage-c flex mx-auto">
+			<div class="abtpage-txt t">
+				<h2 class="text-black">About this webpage</h2>
+				<br>
+				<p class="text-black"> This webpage is meant to be a homepage/portfolio and an archive of my main projects. Since social networks are lacking in terms of customization and freedom, a webpage allows me to organize all of my work and thoughts as I want. It is also a fun project in itself. Designing something that is aesthetically pleasing, lightweight, minimalistic, consistent, and functional from scratch.</p>
+
+				<p class="text-black">If you want to give me a heads up, report an erratum, ask any questions or just send a greeting, you can mail me at <i>aimmxi(at)aimmxi(dot)xyz</i>. I will be more than glad to reply to you; feedback is always appreciated !</p>
+
+				<p class="text-black">If you like my work, please consider donating, as keeping a server up has operating costs. I currently only accept crypto in the form of <a href="/assets/files/btc.txt">Bitcoin</a> or <a href="/assets/files/xmr.txt">Monero</a> for privacy reasons (Sorry for the inconvenience).</p>
+
+				<p class="text-black">Thanks for the visit and I hope you enjoy your stay :]</p>
+				
+				<img class="endsig" src="/assets/img/signature-docked.svg">
+			</div>
+		</section>
+	</main>
+
+	{{ partial "footer.html" . }}
+
+	<script src="/assets/js/type-text.js"></script>
+	<script src="/assets/js/throw-photo.js"></script>
+	<script src="/assets/js/fireflies.js"></script>
+	<script src="/assets/js/stroke.js"></script>
+	<script>
+		const leaves = [
+			"/assets/img/leaves/l0.webp", 
+			"/assets/img/leaves/l1.webp", 
+			"/assets/img/leaves/l2.webp", 
+			"/assets/img/leaves/l3.webp",
+			"/assets/img/leaves/l4.webp",
+			"/assets/img/leaves/l5.webp",
+			"/assets/img/leaves/l6.webp",
+			"/assets/img/leaves/l7.webp",
+			"/assets/img/leaves/l8.webp",
+		];
+
+		drawStroke({
+  			canvasId: "topLeafStroke",
+  			separation: 0.15,
+			imageDelay: 80,
+  			startDelay: 3050,
+  			imageSize: 65,
+  			imageSources: leaves
+		});
+
+		drawStroke({
+  			canvasId: "bottomLeafStroke",
+  			separation: 0.15,
+			imageDelay: 80,
+  			startDelay: 2250,
+  			imageSize: 65,
+  			imageSources: leaves
+		});
+	</script>
+</body>

@@ -1,7 +1,10 @@
 /*----------Animations---------*/
+* {animation-delay: 0s;}
+
 /*----------Logos---------*/
 .grow{
-	animation: grow 6s;
+	animation-name: grow;
+	animation-duration: 6s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
@@ -12,59 +15,82 @@
 	100% { transform: scale(1); }
 }
 
+.grow-hover{transition: transform 0.15s ease-out;}
+.grow-hover:hover{transform: scale(1.15);}
 
 .rotate{
-	animation: rotate 10s;
+	animation-name: rotate;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-@keyframes rotate {
+@keyframes rotate{
 	0% { transform: rotate(-3deg); }
 	50% { transform: rotate(-7deg); }
 	100% { transform: rotate(-3deg); }
 }
 
-
 .rotate-backwards{
-	animation: rotate-backwards 5s;
+	animation-name: rotate-backwards;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-@keyframes rotate-backwards {
+@keyframes rotateBackwards{
 	0% { transform: rotate(3deg); }
 	50% { transform: rotate(5deg); }
 	100% { transform: rotate(3deg); }
 }
 
-.float{
-	animation: float 6s;
+.rotate-fast{
+	animation-name: rotate;
+	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-@keyframes float {
+@keyframes rotateFast{
+	0% { transform: rotate(-3deg); }
+	50% { transform: rotate(-28deg); }
+	100% { transform: rotate(-3deg); }
+}
+
+.float{
+	animation-name: float;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes float{
 	0% { transform: translate(0,  0px); }
 	50%  { transform: translate(0, 15px); }
 	100%   { transform: translate(0, 0px); }
 }
 
-.floatslow{
-	animation: floatslow 3s;
+.float-slow{
+	animation-name: floatSlow;
+	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
-
-.floatslow:hover {animation-play-state: paused;}
-@keyframes floatslow {
+.float-slow:hover{animation-play-state: paused;}
+@keyframes floatSlow{
 	0% { transform: translate(0,  0px); }
 	50%  { transform: translate(0, 5px); }
 	100%   { transform: translate(0, 0px); }
 }
 
-.checkthis{animation: checkthis 7s ease-in-out infinite;}
-@keyframes checkthis {
+.checkthis{
+	animation-name: checkThis;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes checkThis{
 	0% { transform: scale(1); }
 	40% { transform: scale(1); }
 	45% { transform: scale(1.05); }
@@ -74,33 +100,97 @@
 	100% { transform: scale(1); }
 }
 
+.fade-in{
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes fadeIn{
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.stretch-x{
+	animation-name: stretchX;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes stretchX{
+  0% { transform: scaleX(1); }
+  25% { transform: scaleX(1.08); }
+  50% { transform: scaleX(1); }
+  75% { transform: scaleX(0.92); }
+  100% { transform: scaleX(1); }
+}
+
+.stretch-y{
+	animation-name: stretchY;
+	animation-duration: 5s;
+	animation-delay: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes stretchY{
+  0% { transform: scaleY(1); }
+  25% { transform: scaleY(1.08); }
+  50% { transform: scaleY(1); }
+  75% { transform: scaleY(0.92); }
+  100% { transform: scaleY(1); }
+}
+
+.stretch-xy{
+	animation-name: stretchXY;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes stretchXY {
+  0% { transform: scale(1, 1.08); }
+  25% { transform: scale(1.08, 1); }
+  50% { transform: scale(1, 0.92); }
+  75% { transform: scale(0.92, 1); }
+  100% { transform: scale(1, 1.08); }
+}
+
 
 /*----------Titles---------*/
-@keyframes expand-title{
-	from {width: 0;}
-	to {width: var(--titlewidth);}
+@keyframes expandTitle{
+	from { width: 0; }
+	to { width: var(--titlewidth); }
 }
 
-@keyframes title-overflow {
-  from { 
-	overflow: hidden;
-	white-space: nowrap;
-   }
-   to {
-	overflow: auto;
-	white-space: wrap;
-   }
+@keyframes titleOverflow{
+  	0% { overflow: hidden; white-space: nowrap; }
+  	99% { overflow: hidden; white-space: nowrap; }
+ 	100% { overflow: auto; white-space: wrap; }
 }
+
+
+/*----------Badges---------*/
+@keyframes scan{
+	/* Start off-screen */
+	0% {top: 100%; left: -150%;}
+	80% {top: 100%; left: -150%;}
+	100% {top: 0%; left: 50%;}
+}
+
 
 /*----------Photos---------*/
-.throw-photo-left{animation: throw-photo-left 1s var(--curve-quart) forwards;}
-@keyframes throw-photo-left {
+.throw-photo-left{animation: throwPhotoLeft 1s var(--curve-quart) forwards;}
+@keyframes throwPhotoLeft{
 	from {transform: translateX(100vw) rotate(10deg);}
 	to {transform: translateX(0) rotate(-10deg);}
 }
 
-.throw-photo-right{animation: throw-photo-right 1s var(--curve-quart) forwards;}
-@keyframes throw-photo-right {
+.throw-photo-right{animation: throwPhotoRight 1s var(--curve-quart) forwards;}
+@keyframes throwPhotoRight{
 	from {transform: translateX(-100vw) rotate(0deg);}
 	to {transform: translateX(0) rotate(10deg);}
 }

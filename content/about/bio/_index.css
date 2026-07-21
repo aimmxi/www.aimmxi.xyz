@@ -1,0 +1,188 @@
+/*----------Bio---------*/
+main{overflow-x: hidden; position: relative;}
+svg{visibility: hidden; height: 0px;}
+
+
+/*----------Topmost Div---------*/
+.showcase, .desc-c, .insights-c, .abtpage-c{
+	width: var(--bodywidth);
+	position: relative;
+	overflow: hidden;
+}
+
+
+/*----------Showcase---------*/
+.showcase-c{
+	position: relative;
+	height: 87vh;
+	width: var(--bodywidth);
+	backdrop-filter: blur(1rem);
+	margin-top: -100vh;
+	margin-bottom: 100vh;
+	animation: dropDown 0.75s forwards;
+}
+
+.showcase{
+	height: 95%;
+	overflow: visible;
+	width: 0%;
+	background-color: #FFFFFF40;
+	border-left: 3px solid var(--cyan);
+	animation: expandShowcase 0.75s var(--curve-expo) 1s forwards, titleOverflow 3s forwards;
+}
+
+.showcase-photo{  
+	flex: 0 0 auto;	 /* Have a fixed size while the showcase grows */
+	width: calc(var(--bodywidth) / 2);
+}
+
+.small-photo-c{
+	padding: 3rem;
+	width: 30%;
+}
+
+.showcase-text{width: 100%;}
+
+.showcase-photo-rotated{
+	width: 60%;
+	rotate: -4deg;
+}
+
+/*----------Leaves---------*/
+.leaf-stroke-top-c, .leaf-stroke-bottom-c{
+	width: 45%;
+	aspect-ratio: 2/1;
+}
+
+.leaf-stroke-top-c{
+	margin-right: -30%;
+	margin-bottom: 50%;
+	rotate: -15deg;
+	z-index: 2;
+}
+
+.leaf-stroke-bottom-c{
+	margin-left: -30%;
+	margin-top: 45%;
+	rotate: -195deg;
+}
+
+/*----------Badge---------*/
+.badge-c{margin: 1rem 1rem 1rem 2rem;}
+
+.badge{
+	width: 4rem;
+	height: 4rem;
+	background-image: url("/assets/img/icons/icon.png");
+	background-size: cover;
+	background-position: center;
+	background-color: black;
+	overflow: hidden;
+}
+
+.badge-shine{
+	position: absolute;
+	width: 150%;
+	height: 0.35rem;
+	background: rgba(255, 255, 255, 0.7);
+	transform: rotate(45deg);
+	animation: scan 4s ease-in infinite;
+}
+
+/*----------Description---------*/
+.desc-c{
+	background-color: black;
+	overflow: hidden;
+}
+
+.desc-txt{
+	color: white;
+	width: 75%;
+	margin: 2rem;
+	position: relative;
+}
+
+/*----------Insights---------*/
+.insight1, .insight2, .insight3{
+	padding: 2rem; 
+	flex-basis: 1/3%;
+}
+
+.insight1{
+	background-color: black;
+	border-bottom: 3px solid var(--cyan);
+}
+
+.insight2{
+	color: black;
+	background-color: var(--cyan);
+	border-bottom: 3px solid var(--cyan);
+}
+
+.insight3{
+	background-color: white;
+	border-top: 3px solid var(--cyan);
+}
+
+
+/*----------About this page---------*/
+.abtpage-c{background-color: white;}
+.abtpage-txt{padding: 2rem;}
+
+
+/*----------Fireflies---------*/
+.ff{
+	position: absolute;
+	z-index: -10;
+	width: 3rem;
+	height: 3rem;
+	background-image: url('/assets/img/ff.png');
+	transition: top 5s ease-in-out, left 5s ease-in-out;
+	animation: ffFadeIn 2s ease-in-out 2s forwards;
+	opacity: 0;
+}
+
+
+/*----------Animations---------*/
+@keyframes dropDown {100% {margin-top: 1rem; margin-bottom: 0px;}}
+@keyframes expandShowcase {100% {width: 100%;}}
+@keyframes ffFadeIn {100% {opacity: 0.3;}}
+
+
+/*----------Responsive Design---------*/
+/*----------Large---------*/
+@media screen and (max-width: 1024px) {
+	.showcase{flex-direction: column;}
+	.showcase-photo{margin: auto;}
+	.type-text{text-align: center;}
+	.badge-c{margin: 0 0 1rem 0;}
+	.showcase-text-title{
+		text-align: center;
+		display: block;
+	 }
+	
+	.header{height: 9rem;}
+	.insights-c{flex-wrap: wrap;}
+	.insight1, .insight2, .insight3{flex-basis: auto;}
+	.insight1{border-top: 3px solid var(--cyan);}
+	.insight3{border-bottom: 3px solid var(--cyan);}
+	.small-photo-c { width: 50%; }
+	.desc-c{flex-wrap: wrap; }
+	
+	.desc-txt{
+		width: 100%; 
+		margin-bottom: 0px;
+	}
+}
+
+/*----------Small---------*/
+@media screen and (max-width: 640px) {
+	html{font-size: 12px;}
+
+	.showcase-photo{
+		width: auto;
+		margin: auto;
+	}
+
+	.small-photo-c { width: 80%; }
+}
