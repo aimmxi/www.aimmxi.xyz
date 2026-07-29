@@ -9,7 +9,7 @@ disableLiveReload = true
 [params]
   description = "AIMMXI's personal website and a repository of projects and content"
   platformVersion = "1.3r0"
-  contentVersion = "20250609"
+  contentVersion = "20260729"
 
 [outputs]
   home = ["HTML"]
