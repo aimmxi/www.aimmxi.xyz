@@ -1,2 +1,5 @@
+Content update 2025-07-29:
+    - Added photos from 2026-06
+    
 Content update 2025-06-09:
     - Initial commit
