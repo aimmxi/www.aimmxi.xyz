@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/agriculture.css">
+	<link rel="stylesheet" type="text/css" href="./_index.css">
+</head>
+
+
+<body>
+    {{ partial "navbar.html" . }}
+
+	{{ partial "slide-header.html" . }}
+
+	<main>
+		{{ partial "abstract.html" . }}
+
+		<!-- Fetch all pages contained inside of this folder and sort them by title -->
+		{{ $items := sort .Pages ".Title" "desc" }}
+
+		<!-- Draw a item-group for each category (crops, fruit...). These are defined on the _index.md of agriculture -->
+		{{ range $cat_key, $cat_val := .Params.Categories }}
+			<div class="item-group center">
+				<div class="item-header">
+					<h3 class="text-black">{{ $cat_val }}</h3>
+				</div>
+				<div class="item-body flex flex-wrap">
+					<!-- Present all the pages that are inside of a folder that matches the category -->
+    				{{ range $items }}
+						{{ if in .RelPermalink $cat_key }}
+							<div class="item-button">
+								<!-- These two need to be inline blocks or else the link hover gets real weird. Don't ask me why -->
+								<p class="text-xl inline-block mb-0" style="display: inline;">> </p>
+								<a class="text-xl inline-block" href="{{ .RelPermalink }}">{{ .Title }} </a>
+							</div>
+						{{ end }}
+					{{ end }}
+				</div>
+			</div>
+		{{ end }}
+
+		<section class="abstract flex mx-auto">
+    		<div class="abstract-txt">
+            	{{ .Content }}
+    		</div>
+		</section>
+	</main>
+	
+    {{ partial "footer.html" . }}
+</body>

@@ -1,0 +1,24 @@
+/*----------Agriculture---------*/
+
+.item-group{
+    width: var(--bodywidth);
+    margin: 1rem auto 1rem auto;
+	border: 3px solid var(--cyan);
+    background-color: var(--greyshade);
+}
+
+.item-header{
+    background-color: var(--cyan);
+    padding-left: 0.5rem;
+}
+
+.item-body{
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-button{
+    margin: 0.25rem auto 0.25rem auto;
+    padding: 0.25rem;
+}

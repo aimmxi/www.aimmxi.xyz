@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="./_index.css">
+</head>
+
+<body>
+    {{ partial "navbar.html" . }}
+
+	<main>
+		{{ .Title }}
+	</main>
+
+    {{ partial "footer.html" . }}
+</body>
