@@ -24,21 +24,18 @@ People have been indulging in small-scale, personal farming since the dawn of hu
 
 If you relate with any of these things, you might want to give agriculture a try. While having a large parcel and some weekly spare time is ideal for maintaining a varied garden, you can get started with just a few planters and some free space next to a large window. Another great advantage of agriculture is flexibility and how you can scale production with respect to your space and time constraints. 
 
-## On agriculture
+## About this page
 
 <br/>
 
-I have been raising crops ever since I remember and each harvest has something different. Agriculture is not an exact science and there is a wide variety of factors that can influence the outcomes, both positively or negatively. This non-determinism is sometimes refresing, sometimes frustrating; for newcommers it is often the latter. This page contains some of the oddities and techniques I have learnt over the years in the hope that it will be useful for the reader, even if experienced. Different people have different approaches, I will be sharing mine.
+I have been raising crops ever since I remember and each harvest has something different. Agriculture is not an exact science and there is a wide variety of factors that can influence the outcomes, both positively or negatively. This non-determinism is sometimes refresing, sometimes frustrating; for newcommers it is often the latter. This page contains some of the oddities and techniques I have learnt over the years in the hope that it will be useful for the reader, even if experienced. While the methods listed in this page have worked for me, there is no guarantee that they will for you. The articles in this page are a reflection on my experiences and are by no means exhaustive, applicable universally to all scenarios, nor from a professional on the subject. Again, many factors can condition the sucess of a harvest, your particular situation may require different methodology than shown here. 
 
-Above are details about each type of crop and fruit that I have grown, as well as some general advice and miscellaneous tips that are tangential to all types of crops. A minimal primer on conservation of produce is also included.
+With all of that said, this can still be a good starting point for those interested into agriculture. If you want to delve deeper into the subject, I strongly recommend reading local literature about agriculture and asking experienced locals about how they do things. Knowing the caveats of your local conditions in advance can be a extremely useful resource for a sucessful harvest.
 
-While the methods listed in this page have worked for me, there is no guarantee that they will for you, though it can be a great starting point. Again, many factors can condition the sucess of a harvest. If you have any suggestions, recomendations or experiences, drop me a mail, I would be delighted to hear about them.
+Above is a list of articles with details about each type of crop and fruit that I have grown, as well as some general advice and miscellaneous tips that are tangential to all types of crops and a minimal primer on conservation of produce. I also keep logs of previous harvests. 
 
-Below you can check a list of all previous recorded years with some information.
-Logs
-Misc
-Crops 
-Fruit
+If you have any suggestions, recomendations or personal experiences, drop me a mail, I would be delighted to hear about them.
+
 
 Köppen-Geiger climate classification -> Cfb
 "Mild winters, warm but not hot summers, and rainfall spread through the year. Marine influence often keeps temperature extremes modest." as per https://koppenmap.com/
