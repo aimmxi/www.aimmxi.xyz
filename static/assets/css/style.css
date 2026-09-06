@@ -200,7 +200,7 @@ li{margin-bottom: auto;}
 .content-c{
 	width: var(--bodywidth);
 	background-color: black;
-	margin: auto;
+	margin: 3rem auto auto auto;
 	overflow: hidden;			/* Required to avoid top/bottom margin collapsing*/
 }
 

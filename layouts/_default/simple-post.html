@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     {{ partial "head.html" . }}
+	<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
 	<link rel="stylesheet" type="text/css" href="./_index.css">
 </head>
 
@@ -9,7 +10,11 @@
     {{ partial "navbar.html" . }}
 
 	<main>
-		{{ .Title }}
+		<section class="content-c">
+			<div class="content">
+            	{{ .Content }}
+			</div>
+		</section>
 	</main>
 
     {{ partial "footer.html" . }}
